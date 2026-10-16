@@ -1,0 +1,17 @@
+@media (width < 680px) {
+    .group{
+        flex-wrap: wrap;
+    }
+
+    .card{
+        width: 49% !important;
+    }
+}
+
+
+@media (width < 620px) {
+
+    .card{
+        width: 100% !important;
+    }
+}

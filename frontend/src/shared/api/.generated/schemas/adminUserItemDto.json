@@ -1,0 +1,48 @@
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "label": { "type": "string" },
+    "email": { "type": "string" },
+    "telegramUsername": { "type": "string" },
+    "authChannels": {
+      "type": "array",
+      "items": { "type": "string", "enum": ["EMAIL", "TELEGRAM"] }
+    },
+    "createdAt": { "type": "string" },
+    "role": { "type": "string" },
+    "isBlocked": { "type": "boolean" },
+    "subscription": {
+      "type": "object",
+      "properties": {
+        "state": { "type": "string" },
+        "status": { "type": "string" },
+        "planId": { "type": "string" },
+        "planTitle": { "type": "string" },
+        "endsAt": { "type": "string" },
+        "autoRenewEnabled": { "type": "boolean" }
+      },
+      "required": ["state", "autoRenewEnabled"],
+      "x-readme-ref-name": "AdminUserSubscriptionDto"
+    },
+    "successfulPaidTotal": { "type": "string" },
+    "successfulPayments": { "type": "number" },
+    "lastPaidAt": { "type": "string" },
+    "referredUsersCount": { "type": "number" },
+    "wasReferred": { "type": "boolean" }
+  },
+  "required": [
+    "id",
+    "label",
+    "authChannels",
+    "createdAt",
+    "role",
+    "isBlocked",
+    "subscription",
+    "successfulPaidTotal",
+    "successfulPayments",
+    "referredUsersCount",
+    "wasReferred"
+  ],
+  "x-readme-ref-name": "AdminUserItemDto"
+}

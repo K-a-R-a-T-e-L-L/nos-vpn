@@ -1,0 +1,7 @@
+export enum ErrorCodeEnum {
+    UNAUTHORIZED = 'UNAUTHORIZED',
+    FORBIDDEN = 'FORBIDDEN',
+    AUTH_FAIL = 'AUTH_FAIL',
+    ENTITY_NOT_FOUND = 'ENTITY_NOT_FOUND',
+    ENTITY_CREATION_FAIL = 'ENTITY_CREATION_FAIL', // ошибка создания сущности
+}

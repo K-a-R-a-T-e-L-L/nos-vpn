@@ -1,0 +1,14 @@
+{
+  "type": "object",
+  "properties": {
+    "code": { "type": "string" },
+    "name": { "type": "string" },
+    "region": { "type": "string" },
+    "providerType": { "type": "string", "enum": ["REMNAWAVE", "XUI"] },
+    "baseUrl": { "type": "string" },
+    "isActive": { "type": "boolean" },
+    "priority": { "type": "number" },
+    "defaultAccessKey": { "type": "string" }
+  },
+  "x-readme-ref-name": "UpdateServerNodeDto"
+}

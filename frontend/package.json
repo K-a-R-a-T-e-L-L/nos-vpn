@@ -1,0 +1,44 @@
+{
+  "name": "next-mantine-i18n-starter",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test --experimental-strip-types src/widgets/pages/CheckoutPage/checkout-flow.test.ts src/widgets/pages/AdminPage/admin-stage3.test.ts src/widgets/pages/AdminPage/admin-retention.test.ts src/widgets/pages/AdminPage/admin-corrective-stage-b.test.ts src/widgets/pages/AdminPage/admin-promo-actions.test.ts src/widgets/pages/mobile-responsive.test.ts src/widgets/pages/shared/legal/legal-stage2.test.ts src/widgets/pages/frontend-cleanup-stage1.test.ts src/features/plans/plan-selection.test.ts src/features/support/support-web-media.test.ts",
+    "lint": "eslint",
+    "kubb": "kubb --config ./kubb.config.ts",
+    "generate": "npm run kubb"
+  },
+  "dependencies": {
+    "@mantine/core": "^8.3.15",
+    "@mantine/hooks": "^8.3.16",
+    "@tabler/icons-react": "^3.37.1",
+    "@tanstack/react-query": "^5.90.21",
+    "d3": "^7.9.0",
+    "next": "16.1.6",
+    "next-intl": "^4.8.3",
+    "qrcode": "^1.5.4",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
+  },
+  "devDependencies": {
+    "@kubb/cli": "^4.33.3",
+    "@kubb/core": "^4.33.3",
+    "@kubb/plugin-client": "^4.33.3",
+    "@kubb/plugin-oas": "^4.33.3",
+    "@kubb/plugin-react-query": "^4.33.3",
+    "@kubb/plugin-ts": "^4.33.3",
+    "@types/d3": "^7.4.3",
+    "@types/node": "^20",
+    "@types/qrcode": "^1.5.6",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "dotenv": "^17.4.2",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.6",
+    "prettier": "^3.8.1",
+    "typescript": "^5"
+  }
+}

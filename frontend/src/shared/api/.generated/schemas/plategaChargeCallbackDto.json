@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "properties": {
+    "Id": { "type": "string" },
+    "Amount": { "type": "number" },
+    "Currency": { "type": "string" },
+    "Status": { "type": "string" },
+    "PaymentMethod": { "type": "number" },
+    "SubscriptionId": { "type": "string" },
+    "Payload": { "type": "string" },
+    "NextChargeAt": { "type": "string", "nullable": true }
+  },
+  "required": [
+    "Id",
+    "Amount",
+    "Currency",
+    "Status",
+    "PaymentMethod",
+    "SubscriptionId"
+  ],
+  "x-readme-ref-name": "PlategaChargeCallbackDto"
+}

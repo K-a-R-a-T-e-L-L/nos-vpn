@@ -1,0 +1,264 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  color: var(--mantine-color-text);
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    color-mix(
+      in srgb,
+      var(--mantine-color-dark-9) 86%,
+      var(--mantine-color-brandCyan-9) 14%
+    ),
+    var(--mantine-color-dark-9) 34%,
+    color-mix(
+        in srgb,
+        var(--mantine-color-dark-9) 88%,
+        var(--mantine-color-brandMagenta-9) 12%
+      )
+      100%
+  );
+}
+
+.mantine-Card-root,
+.mantine-Paper-root {
+  width: 100%;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  box-shadow: 0 18px 60px
+    color-mix(in srgb, var(--mantine-color-black) 34%, transparent);
+}
+
+.mantine-Card-root:hover,
+.mantine-Paper-root:hover {
+  border-color: color-mix(
+    in srgb,
+    var(--mantine-color-brandCyan-7) 36%,
+    var(--mantine-color-dark-6)
+  );
+}
+
+.mantine-Button-root {
+  min-height: 44px;
+  max-width: 100%;
+  height: auto;
+  font-weight: 700;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    background-color 0.22s ease,
+    border-color 0.22s ease,
+    color 0.22s ease;
+}
+
+.mantine-Button-root::before {
+  content: "";
+  position: absolute;
+  top: -30%;
+  left: -22%;
+  width: 38%;
+  height: 160%;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.32),
+    transparent
+  );
+  opacity: 0.9;
+  transform: translateX(-240%) skewX(-24deg);
+  transition: transform 0.48s ease;
+  z-index: 0;
+}
+
+.mantine-Button-root:not(:disabled):not([data-disabled]):hover {
+  transform: scale(1.045);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+}
+
+.mantine-Button-root:not(:disabled):not([data-disabled]):hover::before {
+  transform: translateX(420%) skewX(-24deg);
+}
+
+.mantine-Button-label,
+.mantine-Button-section {
+  position: relative;
+  z-index: 1;
+}
+
+.mantine-Button-label {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.button-orange {
+  border-color: rgba(255, 147, 29, 0.34) !important;
+  background: linear-gradient(180deg, #ff9917 0%, #ff8912 100%) !important;
+  color: #fff7ef !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.16),
+    0 10px 24px rgba(255, 137, 18, 0.22);
+}
+
+.button-neon {
+  border-color: rgba(154, 240, 0, 0.34) !important;
+  background: linear-gradient(180deg, #a6ff1f 0%, #8ff000 100%) !important;
+  color: #11170e !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.28),
+    0 12px 28px rgba(154, 240, 0, 0.2);
+}
+
+.button-neon-soft {
+  border: 1px solid rgba(154, 240, 0, 0.22) !important;
+  background: linear-gradient(
+    180deg,
+    rgba(56, 90, 24, 0.92),
+    rgba(35, 58, 18, 0.96)
+  ) !important;
+  color: #f3ffe1 !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 10px 24px rgba(82, 129, 29, 0.18);
+}
+
+.button-neon-soft:hover,
+.button-neon-soft:focus-visible {
+  border-color: rgba(154, 240, 0, 0.34) !important;
+  background: linear-gradient(
+    180deg,
+    rgba(68, 108, 28, 0.96),
+    rgba(41, 70, 20, 0.98)
+  ) !important;
+}
+
+.mantine-AppShell-main,
+.mantine-Container-root,
+.mantine-SimpleGrid-root,
+.mantine-Card-root,
+.mantine-Paper-root,
+.mantine-Group-root,
+.mantine-Stack-root {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.mantine-Group-root > *,
+.mantine-SimpleGrid-root > *,
+.mantine-Grid-col > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.mantine-Input-input,
+.mantine-TextInput-input,
+.mantine-PasswordInput-input,
+textarea,
+select {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  min-height: 44px !important;
+  text-overflow: ellipsis;
+}
+
+.mantine-PasswordInput-visibilityToggle {
+  min-width: 44px !important;
+  min-height: 44px !important;
+}
+
+.mantine-ActionIcon-root,
+.mantine-Burger-root,
+.mantine-Tabs-tab,
+.mantine-Accordion-control,
+.mantine-Drawer-close {
+  min-width: 44px !important;
+  min-height: 44px !important;
+}
+
+.mantine-Drawer-content,
+.mantine-Modal-content {
+  max-width: calc(100vw - 24px);
+  overflow-wrap: anywhere;
+}
+
+img,
+video,
+canvas,
+svg {
+  max-width: 100%;
+}
+
+pre,
+code {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 48em) {
+  .mantine-Title-root[data-order="1"] {
+    font-size: clamp(1.9rem, 10vw, 2.25rem);
+    line-height: 1.08;
+    overflow-wrap: anywhere;
+  }
+
+  .mantine-Title-root[data-order="2"] {
+    font-size: clamp(1.55rem, 8vw, 1.75rem);
+    line-height: 1.14;
+    overflow-wrap: anywhere;
+  }
+
+  .mantine-Title-root,
+  .mantine-Text-root,
+  .mantine-Alert-message,
+  .mantine-Badge-label {
+    overflow-wrap: anywhere;
+  }
+}
+
+a {
+  color: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(
+      in srgb,
+      var(--mantine-color-brandCyan-5) 62%,
+      transparent
+    )
+    color-mix(in srgb, var(--mantine-color-dark-8) 82%, transparent);
+}
+
+.card {
+  transition: all 0.1s ease-in-out;
+}
+
+.card:hover {
+  border: 1px solid var(--mantine-color-brandCyan-7) !important;
+  transform: translateX(4px);
+}

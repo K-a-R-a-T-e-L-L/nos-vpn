@@ -1,0 +1,10 @@
+{
+  "type": "object",
+  "properties": {
+    "key": { "type": "string" },
+    "label": { "type": "string" },
+    "usageCount": { "type": "number" }
+  },
+  "required": ["key", "label", "usageCount"],
+  "x-readme-ref-name": "AdminPromoUsageBreakdownItemDto"
+}

@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "properties": {
+    "referralCode": { "type": "string" },
+    "telegramBotStartUrl": { "type": "string", "nullable": true },
+    "invitedCount": { "type": "number" },
+    "bonusBalanceRub": { "type": "number" },
+    "totalBonusRub": { "type": "number" }
+  },
+  "required": [
+    "referralCode",
+    "invitedCount",
+    "bonusBalanceRub",
+    "totalBonusRub"
+  ],
+  "x-readme-ref-name": "ReferralStatsDto"
+}

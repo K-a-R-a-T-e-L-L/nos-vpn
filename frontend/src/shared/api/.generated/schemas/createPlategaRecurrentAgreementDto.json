@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "properties": {
+    "planId": { "type": "string", "format": "uuid" },
+    "consent": {
+      "type": "number",
+      "enum": [true],
+      "description": "Explicit acceptance of the recurrent payment disclosure"
+    }
+  },
+  "required": ["planId", "consent"],
+  "x-readme-ref-name": "CreatePlategaRecurrentAgreementDto"
+}

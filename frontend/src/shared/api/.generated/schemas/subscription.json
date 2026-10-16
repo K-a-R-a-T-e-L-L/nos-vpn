@@ -1,0 +1,62 @@
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "createdAt": { "format": "date-time", "type": "string" },
+    "updatedAt": { "format": "date-time", "type": "string" },
+    "deletedAt": { "format": "date-time", "type": "string" },
+    "status": { "type": "string" },
+    "userId": { "type": "string" },
+    "plan": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "createdAt": { "format": "date-time", "type": "string" },
+        "updatedAt": { "format": "date-time", "type": "string" },
+        "deletedAt": { "format": "date-time", "type": "string" },
+        "code": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "name": { "type": "string" },
+        "period": { "type": "number" },
+        "amount": { "type": "number" },
+        "devicesLimit": { "type": "number", "nullable": true },
+        "isActive": { "type": "boolean" }
+      },
+      "required": [
+        "id",
+        "createdAt",
+        "updatedAt",
+        "deletedAt",
+        "name",
+        "period",
+        "amount",
+        "isActive"
+      ],
+      "x-readme-ref-name": "Plan"
+    },
+    "nextPayAt": { "format": "date-time", "type": "string" },
+    "startAt": { "format": "date-time", "type": "string" },
+    "endsAt": { "format": "date-time", "type": "string" },
+    "graceEndsAt": { "format": "date-time", "type": "string" },
+    "isTrial": { "type": "boolean" },
+    "trialEndsAt": { "format": "date-time", "type": "string" },
+    "sourcePromoCodeId": { "type": "string" },
+    "lastProvisionedAt": { "format": "date-time", "type": "string" },
+    "accessDisabledAt": { "format": "date-time", "type": "string" },
+    "reminderState": { "type": "object", "additionalProperties": true }
+  },
+  "required": [
+    "id",
+    "createdAt",
+    "updatedAt",
+    "deletedAt",
+    "status",
+    "userId",
+    "plan",
+    "nextPayAt",
+    "startAt",
+    "isTrial"
+  ],
+  "x-readme-ref-name": "Subscription"
+}

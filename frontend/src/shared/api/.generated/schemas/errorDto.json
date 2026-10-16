@@ -1,0 +1,26 @@
+{
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "enum": [
+        "UNAUTHORIZED",
+        "FORBIDDEN",
+        "AUTH_FAIL",
+        "ENTITY_NOT_FOUND",
+        "ENTITY_CREATION_FAIL"
+      ],
+      "example": "ENTITY_CREATION_FAIL"
+    },
+    "error": { "type": "string", "example": "Bad Request" },
+    "statusCode": { "type": "number", "example": 400 },
+    "description": { "type": "string" },
+    "messages": {
+      "example": ["password|IS_NOT_EMPTY"],
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "required": ["error", "statusCode"],
+  "x-readme-ref-name": "ErrorDto"
+}

@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "properties": {
+    "state": { "type": "string" },
+    "status": { "type": "string" },
+    "planId": { "type": "string" },
+    "planTitle": { "type": "string" },
+    "endsAt": { "type": "string" },
+    "autoRenewEnabled": { "type": "boolean" }
+  },
+  "required": ["state", "autoRenewEnabled"],
+  "x-readme-ref-name": "AdminUserSubscriptionDto"
+}

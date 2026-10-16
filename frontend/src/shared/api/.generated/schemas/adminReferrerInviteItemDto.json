@@ -1,0 +1,42 @@
+{
+  "type": "object",
+  "properties": {
+    "invitedUser": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "label": { "type": "string" },
+        "email": { "type": "string" },
+        "telegramUsername": { "type": "string" }
+      },
+      "required": ["label"],
+      "x-readme-ref-name": "AdminSafeUserDto"
+    },
+    "registeredAt": { "type": "string" },
+    "firstPaidAt": { "type": "string" },
+    "successfulPayments": { "type": "number" },
+    "successfulRevenue": { "type": "string" },
+    "awardedBonus": { "type": "string" },
+    "latestLedgerStatus": { "type": "string" },
+    "latestMerchant": { "type": "string" },
+    "latestPlan": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "code": { "type": "string" },
+        "title": { "type": "string" }
+      },
+      "x-readme-ref-name": "AdminSafePlanDto"
+    },
+    "latestPromoCode": { "type": "string" }
+  },
+  "required": [
+    "invitedUser",
+    "registeredAt",
+    "successfulPayments",
+    "successfulRevenue",
+    "awardedBonus",
+    "latestPlan"
+  ],
+  "x-readme-ref-name": "AdminReferrerInviteItemDto"
+}

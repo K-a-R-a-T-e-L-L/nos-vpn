@@ -1,0 +1,40 @@
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string", "format": "uuid" },
+    "providerSubscriptionId": { "type": "string", "nullable": true },
+    "merchant": { "type": "string", "enum": ["SITE", "BOT"] },
+    "status": { "type": "string" },
+    "providerStatus": { "type": "string", "nullable": true },
+    "amount": { "type": "number" },
+    "currency": { "type": "string" },
+    "durationDays": { "type": "number" },
+    "redirect": { "type": "string", "nullable": true },
+    "nextChargeAt": {
+      "format": "date-time",
+      "type": "string",
+      "nullable": true
+    },
+    "lastChargeAt": {
+      "format": "date-time",
+      "type": "string",
+      "nullable": true
+    },
+    "cancelledAt": {
+      "format": "date-time",
+      "type": "string",
+      "nullable": true
+    },
+    "createdAt": { "format": "date-time", "type": "string" }
+  },
+  "required": [
+    "id",
+    "merchant",
+    "status",
+    "amount",
+    "currency",
+    "durationDays",
+    "createdAt"
+  ],
+  "x-readme-ref-name": "PlategaRecurrentAgreementResponseDto"
+}

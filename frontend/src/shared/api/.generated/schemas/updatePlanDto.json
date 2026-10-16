@@ -1,0 +1,14 @@
+{
+  "type": "object",
+  "properties": {
+    "code": { "type": "string" },
+    "name": { "type": "string" },
+    "title": { "type": "string" },
+    "description": { "type": "string" },
+    "period": { "type": "number" },
+    "amount": { "type": "number" },
+    "isActive": { "type": "boolean" },
+    "devicesLimit": { "type": "number" }
+  },
+  "x-readme-ref-name": "UpdatePlanDto"
+}

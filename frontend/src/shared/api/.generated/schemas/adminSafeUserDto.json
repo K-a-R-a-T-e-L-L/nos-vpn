@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "label": { "type": "string" },
+    "email": { "type": "string" },
+    "telegramUsername": { "type": "string" }
+  },
+  "required": ["label"],
+  "x-readme-ref-name": "AdminSafeUserDto"
+}

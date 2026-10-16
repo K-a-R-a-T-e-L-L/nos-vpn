@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "properties": {
+    "first": { "type": "string", "title": "Link to first page" },
+    "previous": { "type": "string", "title": "Link to previous page" },
+    "current": { "type": "string", "title": "Link to current page" },
+    "next": { "type": "string", "title": "Link to next page" },
+    "last": { "type": "string", "title": "Link to last page" }
+  },
+  "x-readme-ref-name": "PaginatedLinksDocumented"
+}

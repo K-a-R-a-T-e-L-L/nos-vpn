@@ -1,0 +1,7703 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/api/user/tg-auth": {
+      "post": {
+        "operationId": "UserController_authenticate",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TgAuthDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TgAuthResponseDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDto"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Создать запись",
+        "tags": [
+          "User"
+        ]
+      }
+    },
+    "/api/user/register": {
+      "post": {
+        "operationId": "UserController_register",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserAuthDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmailAuthResponseDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDto"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Создать запись",
+        "tags": [
+          "User"
+        ]
+      }
+    },
+    "/api/user/login": {
+      "post": {
+        "operationId": "UserController_login",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserAuthDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmailAuthResponseDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDto"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Создать запись",
+        "tags": [
+          "User"
+        ]
+      }
+    },
+    "/api/user/refresh": {
+      "post": {
+        "operationId": "UserController_refreshAccessToken",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RefreshResponseDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDto"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Создать запись",
+        "tags": [
+          "User"
+        ]
+      }
+    },
+    "/api/user/logout": {
+      "post": {
+        "operationId": "UserController_logout",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDto"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Создать запись",
+        "tags": [
+          "User"
+        ]
+      }
+    },
+    "/api/user/telegram-auth-link": {
+      "post": {
+        "operationId": "UserController_createTelegramAuthLink",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TelegramAuthLinkResponseDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDto"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Создать запись",
+        "tags": [
+          "User"
+        ]
+      }
+    },
+    "/api/user/telegram-auth-status": {
+      "post": {
+        "operationId": "UserController_completeTelegramAuth",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TelegramAuthStatusDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TelegramAuthStatusResponseDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDto"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Создать запись",
+        "tags": [
+          "User"
+        ]
+      }
+    },
+    "/api/user": {
+      "get": {
+        "operationId": "UserController_get",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Получить запись",
+        "tags": [
+          "User"
+        ]
+      }
+    },
+    "/api/user/email-password": {
+      "post": {
+        "operationId": "UserController_attachEmailPassword",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserAuthDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Создать запись",
+        "tags": [
+          "User"
+        ]
+      }
+    },
+    "/api/user/telegram-link": {
+      "post": {
+        "operationId": "UserController_createTelegramLink",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TelegramLinkResponseDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Создать запись",
+        "tags": [
+          "User"
+        ]
+      }
+    },
+    "/api/user/telegram-link-code/consume": {
+      "post": {
+        "operationId": "UserController_consumeTelegramLinkCode",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TelegramSiteLinkCodeDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Создать запись",
+        "tags": [
+          "User"
+        ]
+      }
+    },
+    "/api/admin/user": {
+      "get": {
+        "operationId": "UserAdminController_list",
+        "parameters": [
+          {
+            "name": "search",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pageSize",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "List admin users",
+        "tags": [
+          "User admin"
+        ]
+      }
+    },
+    "/api/admin/user/summary": {
+      "get": {
+        "operationId": "UserAdminController_summary",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Get admin dashboard summary",
+        "tags": [
+          "User admin"
+        ]
+      }
+    },
+    "/api/admin/user/query": {
+      "get": {
+        "operationId": "UserAdminController_queryUsers",
+        "parameters": [
+          {
+            "name": "search",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "userId",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "format": "uuid",
+              "type": "string"
+            }
+          },
+          {
+            "name": "telegramId",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "registeredFrom",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "registeredTo",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "role",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "enum": [
+                "USER",
+                "MODERATOR",
+                "ADMIN"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "blocked",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "authChannel",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "default": "ALL",
+              "enum": [
+                "ALL",
+                "EMAIL",
+                "TELEGRAM",
+                "BOTH"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "subscriptionState",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "default": "ALL",
+              "enum": [
+                "ALL",
+                "ACTIVE",
+                "EXPIRED",
+                "NONE"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "planId",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "format": "uuid",
+              "type": "string"
+            }
+          },
+          {
+            "name": "expiresBefore",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "expiresAfter",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "autoRenewEnabled",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "paymentState",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "default": "ALL",
+              "enum": [
+                "ALL",
+                "EVER_PAID",
+                "NEVER_PAID"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "referralState",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "default": "ALL",
+              "enum": [
+                "ALL",
+                "IS_REFERRER",
+                "WAS_REFERRED"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "promoCode",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/Object"
+            }
+          },
+          {
+            "name": "pageSize",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/Object"
+            }
+          },
+          {
+            "name": "sortBy",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "default": "createdAt",
+              "enum": [
+                "createdAt",
+                "email",
+                "subscriptionEndsAt",
+                "successfulPaidTotal",
+                "lastPaidAt"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "sortDir",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "default": "DESC",
+              "enum": [
+                "ASC",
+                "DESC"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminUserListResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Query safe admin users with server filtering and pagination",
+        "tags": [
+          "User admin"
+        ]
+      }
+    },
+    "/api/admin/user/{id}/details": {
+      "get": {
+        "operationId": "UserAdminController_details",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "paymentPage",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/Object"
+            }
+          },
+          {
+            "name": "paymentPageSize",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/Object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminUserDetailsResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Get read-only safe admin user details",
+        "tags": [
+          "User admin"
+        ]
+      }
+    },
+    "/api/admin/user/{id}/recurrent": {
+      "get": {
+        "operationId": "UserAdminController_recurrent",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AdminPlategaRecurrentAgreementDto"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "List safe Platega recurrent agreements for one user",
+        "tags": [
+          "User admin"
+        ]
+      }
+    },
+    "/api/admin/user/{id}/recurrent/{agreementId}/cancel": {
+      "post": {
+        "operationId": "UserAdminController_cancelRecurrent",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "agreementId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminPlategaRecurrentAgreementDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Cancel an owned Platega recurrent agreement without changing paid access",
+        "tags": [
+          "User admin"
+        ]
+      }
+    },
+    "/api/admin/user/{id}/recurrent/{agreementId}/reconcile": {
+      "post": {
+        "operationId": "UserAdminController_reconcileRecurrent",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "agreementId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminPlategaRecurrentAgreementDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Reconcile an owned Platega recurrent agreement without fabricating payments or entitlement",
+        "tags": [
+          "User admin"
+        ]
+      }
+    },
+    "/api/admin/user/{id}/wallet": {
+      "patch": {
+        "operationId": "UserAdminController_updateWallet",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateUserWalletDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Update referral wallet balance",
+        "tags": [
+          "User admin"
+        ]
+      }
+    },
+    "/api/admin/user/{id}/block": {
+      "patch": {
+        "operationId": "UserAdminController_updateBlock",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateUserBlockDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Block or unblock user",
+        "tags": [
+          "User admin"
+        ]
+      }
+    },
+    "/api/admin/user/{id}/subscription": {
+      "post": {
+        "operationId": "UserAdminController_configureSubscription",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdminConfigureSubscriptionDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Issue or reconfigure user subscription",
+        "tags": [
+          "User admin"
+        ]
+      }
+    },
+    "/api/admin/user/{id}/subscription/stop": {
+      "post": {
+        "operationId": "UserAdminController_stopSubscription",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Stop a user subscription and disable VPN access",
+        "tags": [
+          "User admin"
+        ]
+      }
+    },
+    "/api/admin/user/{id}/access": {
+      "get": {
+        "operationId": "UserAdminController_access",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminUserAccessResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Get the narrow current access URL for a user",
+        "tags": [
+          "User admin"
+        ]
+      }
+    },
+    "/api/admin/user/{id}/auto-renew/yookassa/disable": {
+      "post": {
+        "operationId": "UserAdminController_disableYooKassaAutoRenew",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Disable YooKassa saved-method auto-renew for a user",
+        "tags": [
+          "User admin"
+        ]
+      }
+    },
+    "/api/admin/user/{id}": {
+      "delete": {
+        "operationId": "UserAdminController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Permanently delete user",
+        "tags": [
+          "User admin"
+        ]
+      }
+    },
+    "/api/user/subscription": {
+      "get": {
+        "operationId": "SubscriptionUserController_getUserSubscription",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Subscription"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Получить подписку пользователя",
+        "tags": [
+          "Subscriptions"
+        ]
+      },
+      "post": {
+        "operationId": "SubscriptionUserController_createUserSubscription",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateSubscriptionDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Subscription"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Создать подписку",
+        "tags": [
+          "Subscriptions"
+        ]
+      }
+    },
+    "/api/user/subscription/action": {
+      "post": {
+        "operationId": "SubscriptionUserController_subscriptionAction",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActionDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Выполнить действие с подпиской пользователя",
+        "tags": [
+          "Subscriptions"
+        ]
+      }
+    },
+    "/api/user/subscription/auto-renew/enable": {
+      "post": {
+        "operationId": "SubscriptionUserController_enableAutoRenew",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AutoRenewResponseDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Включить автопродление",
+        "tags": [
+          "Subscriptions"
+        ]
+      }
+    },
+    "/api/user/subscription/auto-renew/disable": {
+      "post": {
+        "operationId": "SubscriptionUserController_disableAutoRenew",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AutoRenewResponseDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Отключить автопродление",
+        "tags": [
+          "Subscriptions"
+        ]
+      }
+    },
+    "/api/user/subscription/auto-renew": {
+      "get": {
+        "operationId": "SubscriptionUserController_getAutoRenew",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AutoRenewResponseDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Статус автопродления",
+        "tags": [
+          "Subscriptions"
+        ]
+      }
+    },
+    "/api/admin/subscriptions": {
+      "get": {
+        "operationId": "SubscriptionController_get",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Успешный ответ",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Subscription"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Получить список записей",
+        "tags": [
+          "Admin subscriptions"
+        ]
+      }
+    },
+    "/api/admin/subscriptions/activate": {
+      "post": {
+        "operationId": "AdminSubscriptionController_activate",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Activate subscription by id",
+        "tags": [
+          "Admin subscriptions"
+        ]
+      }
+    },
+    "/api/admin/subscriptions/{id}": {
+      "delete": {
+        "operationId": "AdminSubscriptionController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Delete subscription by id",
+        "tags": [
+          "Admin subscriptions"
+        ]
+      }
+    },
+    "/api/admin/subscriptions/{id}/apply-plan": {
+      "post": {
+        "operationId": "AdminSubscriptionController_applyPlan",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdminApplyPlanDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Apply paid plan to subscription",
+        "tags": [
+          "Admin subscriptions"
+        ]
+      }
+    },
+    "/api/payments/checkout-options/{planId}": {
+      "get": {
+        "operationId": "PaymentController_checkoutOptionsForPlan",
+        "parameters": [
+          {
+            "name": "planId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaymentCheckoutOptionsDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "Payments"
+        ]
+      }
+    },
+    "/api/payments/platega/crypto": {
+      "post": {
+        "operationId": "PaymentController_createPlategaCryptoPayment",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePlategaCryptoPaymentDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "Payments"
+        ]
+      }
+    },
+    "/api/payments/platega/webhook": {
+      "post": {
+        "operationId": "PaymentController_plategaWebhook",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Payments"
+        ]
+      }
+    },
+    "/api/payments/{paymentId}/status": {
+      "get": {
+        "operationId": "PaymentController_getPaymentStatus",
+        "parameters": [
+          {
+            "name": "paymentId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Проверить и синхронизировать статус платежа",
+        "tags": [
+          "Payments"
+        ]
+      }
+    },
+    "/api/payments/webhooks/yookassa/site": {
+      "post": {
+        "operationId": "PaymentController_yookassaSiteWebhook",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/YooKassaWebhookDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Payments"
+        ]
+      }
+    },
+    "/api/payments/webhooks/yookassa/bot": {
+      "post": {
+        "operationId": "PaymentController_yookassaBotWebhook",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/YooKassaWebhookDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Payments"
+        ]
+      }
+    },
+    "/api/payments/platega/recurrent": {
+      "post": {
+        "operationId": "PlategaRecurrentUserController_create",
+        "parameters": [
+          {
+            "name": "idempotency-key",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePlategaRecurrentAgreementDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PlategaRecurrentAgreementResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Create a feature-gated Platega recurrent agreement",
+        "tags": [
+          "Platega recurrent"
+        ]
+      }
+    },
+    "/api/payments/platega/recurrent/{id}": {
+      "get": {
+        "operationId": "PlategaRecurrentUserController_read",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PlategaRecurrentAgreementResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Read an owned Platega recurrent agreement",
+        "tags": [
+          "Platega recurrent"
+        ]
+      }
+    },
+    "/api/payments/webhooks/platega/recurrent/subscription-status": {
+      "post": {
+        "operationId": "PlategaRecurrentCallbackController_subscriptionStatus",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PlategaSubscriptionStatusCallbackDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "summary": "Handle Platega recurrent mandate status callback",
+        "tags": [
+          "Platega recurrent callbacks"
+        ]
+      }
+    },
+    "/api/payments/webhooks/platega/recurrent/charge-status": {
+      "post": {
+        "operationId": "PlategaRecurrentCallbackController_charge",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PlategaChargeCallbackDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "summary": "Handle Platega recurrent charge callback",
+        "tags": [
+          "Platega recurrent callbacks"
+        ]
+      }
+    },
+    "/api/admin/payments/platega/recurrent/{id}/cancel": {
+      "post": {
+        "operationId": "PlategaRecurrentAdminController_cancel",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PlategaRecurrentAgreementResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Cancel a Platega recurrent agreement through support/admin",
+        "tags": [
+          "Admin Platega recurrent"
+        ]
+      }
+    },
+    "/api/admin/payments/platega/recurrent/{id}/reconcile": {
+      "post": {
+        "operationId": "PlategaRecurrentAdminController_reconcile",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PlategaRecurrentAgreementResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Reconcile a Platega recurrent agreement with provider state",
+        "tags": [
+          "Admin Platega recurrent"
+        ]
+      }
+    },
+    "/api/user/access": {
+      "get": {
+        "operationId": "UserAccessController_getAccess",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserAccessResponseDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Получить запись",
+        "tags": [
+          "User access"
+        ]
+      }
+    },
+    "/api/admin/server-nodes": {
+      "get": {
+        "operationId": "AdminServerNodeController_list",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "Admin server nodes"
+        ]
+      },
+      "post": {
+        "operationId": "AdminServerNodeController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateServerNodeDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "Admin server nodes"
+        ]
+      }
+    },
+    "/api/admin/server-nodes/{id}": {
+      "patch": {
+        "operationId": "AdminServerNodeController_update",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateServerNodeDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "Admin server nodes"
+        ]
+      },
+      "delete": {
+        "operationId": "AdminServerNodeController_delete",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "Admin server nodes"
+        ]
+      }
+    },
+    "/api/admin/billing/meters": {
+      "get": {
+        "operationId": "MeterController_list",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Meter"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "List meters",
+        "tags": [
+          "Admin billing meters"
+        ]
+      },
+      "post": {
+        "operationId": "MeterController_create",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Meter"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Create meter",
+        "tags": [
+          "Admin billing meters"
+        ]
+      }
+    },
+    "/api/admin/billing/meters/{id}": {
+      "delete": {
+        "operationId": "MeterController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Meter"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Delete meter by id",
+        "tags": [
+          "Admin billing meters"
+        ]
+      }
+    },
+    "/api/admin/billing/plan-limits": {
+      "get": {
+        "operationId": "PlanLimitController_list",
+        "parameters": [
+          {
+            "name": "planId",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PlanLimit"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "List plan limits (optional planId)",
+        "tags": [
+          "Admin billing plan limits"
+        ]
+      },
+      "post": {
+        "operationId": "PlanLimitController_create",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PlanLimit"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Create plan limit",
+        "tags": [
+          "Admin billing plan limits"
+        ]
+      }
+    },
+    "/api/admin/billing/plan-limits/{id}": {
+      "delete": {
+        "operationId": "PlanLimitController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PlanLimit"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Delete plan limit by id",
+        "tags": [
+          "Admin billing plan limits"
+        ]
+      }
+    },
+    "/api/admin/billing/usage/events": {
+      "get": {
+        "operationId": "UsageController_listEvents",
+        "parameters": [
+          {
+            "name": "runLogId",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UsageEvent"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "List usage events (optional runLogId)",
+        "tags": [
+          "Admin billing usage"
+        ]
+      }
+    },
+    "/api/admin/billing/usage/line-items": {
+      "get": {
+        "operationId": "UsageController_listLineItems",
+        "parameters": [
+          {
+            "name": "usageEventId",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UsageLineItem"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "List usage line items (optional usageEventId)",
+        "tags": [
+          "Admin billing usage"
+        ]
+      }
+    },
+    "/api/admin/promo-codes": {
+      "get": {
+        "operationId": "AdminPromoController_list",
+        "parameters": [
+          {
+            "name": "page",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pageSize",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "Admin promo codes"
+        ]
+      },
+      "post": {
+        "operationId": "AdminPromoController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePromoCodeDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "Admin promo codes"
+        ]
+      }
+    },
+    "/api/admin/promo-codes/{id}": {
+      "patch": {
+        "operationId": "AdminPromoController_update",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdatePromoCodeDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "Admin promo codes"
+        ]
+      },
+      "delete": {
+        "operationId": "AdminPromoController_delete",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "Admin promo codes"
+        ]
+      }
+    },
+    "/api/promo-codes/validate": {
+      "post": {
+        "operationId": "PromoController_validate",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValidatePromoCodeDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "Promo codes"
+        ]
+      }
+    },
+    "/api/plans": {
+      "get": {
+        "operationId": "PlanController_get",
+        "parameters": [
+          {
+            "name": "page",
+            "required": false,
+            "in": "query",
+            "description": "Page number to retrieve.If you provide invalid value the default page number will applied\n        <p>\n             <b>Example: </b> 1\n          </p>\n        <p>\n             <b>Default Value: </b> 1\n          </p>\n        ",
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "description": "Number of records per page.\n      <p>\n             <b>Example: </b> 20\n          </p>\n      <p>\n             <b>Default Value: </b> 60\n          </p>\n      <p>\n             <b>Max Value: </b> 60\n          </p>\n\n      If provided value is greater than max value, max value will be applied.\n      ",
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "filter.id",
+            "required": false,
+            "in": "query",
+            "description": "Filter by id query param.\n          <p>\n             <b>Format: </b> filter.id={$not}:OPERATION:VALUE\n          </p>\n          <p>\n             <b>Example: </b> filter.id=$not:$like:John Doe&filter.id=like:John\n          </p>\n          <h4>Available Operations</h4><ul><li>$and</li>\n<li>$or</li>\n<li>$not</li>\n<li>$eq</li>\n<li>$gt</li>\n<li>$gte</li>\n<li>$in</li>\n<li>$null</li>\n<li>$lt</li>\n<li>$lte</li>\n<li>$btw</li>\n<li>$ilike</li>\n<li>$sw</li>\n<li>$contains</li></ul>",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "filter.name",
+            "required": false,
+            "in": "query",
+            "description": "Filter by name query param.\n          <p>\n             <b>Format: </b> filter.name={$not}:OPERATION:VALUE\n          </p>\n          <p>\n             <b>Example: </b> filter.name=$not:$like:John Doe&filter.name=like:John\n          </p>\n          <h4>Available Operations</h4><ul><li>$and</li>\n<li>$or</li>\n<li>$not</li>\n<li>$eq</li>\n<li>$gt</li>\n<li>$gte</li>\n<li>$in</li>\n<li>$null</li>\n<li>$lt</li>\n<li>$lte</li>\n<li>$btw</li>\n<li>$ilike</li>\n<li>$sw</li>\n<li>$contains</li></ul>",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "sortBy",
+            "required": false,
+            "in": "query",
+            "description": "Parameter to sort by.\n      <p>To sort by multiple fields, just provide query param multiple types. The order in url defines an order of sorting</p>\n      <p>\n             <b>Format: </b> fieldName:DIRECTION\n          </p>\n      <p>\n             <b>Example: </b> sortBy=id:DESC&sortBy=createdAt:ASC\n          </p>\n      <p>\n             <b>Default Value: </b> createdAt:DESC\n          </p>\n      <h4>Available Fields</h4><ul><li>id</li></ul>\n      ",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "id:ASC",
+                  "id:DESC"
+                ]
+              }
+            }
+          },
+          {
+            "name": "search",
+            "required": false,
+            "in": "query",
+            "description": "Search term to filter result values\n        <p>\n             <b>Example: </b> John\n          </p>\n        <p>\n             <b>Default Value: </b> No default value\n          </p>\n        ",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "searchBy",
+            "required": false,
+            "in": "query",
+            "description": "List of fields to search by term to filter result values\n        <p>\n             <b>Example: </b> \n          </p>\n        <p>\n             <b>Default Value: </b> By default all fields mentioned below will be used to search by term\n          </p>\n        <h4>Available Fields</h4><ul></ul>\n        ",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "required": [
+                    "data",
+                    "meta",
+                    "links"
+                  ],
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Plan"
+                      }
+                    },
+                    "meta": {
+                      "properties": {
+                        "itemsPerPage": {
+                          "type": "number"
+                        },
+                        "totalItems": {
+                          "type": "number"
+                        },
+                        "currentPage": {
+                          "type": "number"
+                        },
+                        "totalPages": {
+                          "type": "number"
+                        },
+                        "sortBy": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "enum": [
+                              "ASC",
+                              "DESC"
+                            ]
+                          }
+                        },
+                        "searchBy": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        },
+                        "search": {
+                          "type": "string"
+                        },
+                        "select": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        },
+                        "filter": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "oneOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "string"
+                                  }
+                                }
+                              ]
+                            },
+                            "name": {
+                              "oneOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "string"
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "links": {
+                      "type": "object",
+                      "properties": {
+                        "first": {
+                          "type": "string"
+                        },
+                        "previous": {
+                          "type": "string"
+                        },
+                        "current": {
+                          "type": "string"
+                        },
+                        "next": {
+                          "type": "string"
+                        },
+                        "last": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "summary": "Получить список тарифов",
+        "tags": [
+          "Plans"
+        ]
+      }
+    },
+    "/api/plans/catalog": {
+      "get": {
+        "operationId": "PlanController_getCatalog",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Plans"
+        ]
+      }
+    },
+    "/api/admin/plans": {
+      "get": {
+        "operationId": "AdminPlanController_list",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "List all plans",
+        "tags": [
+          "Admin plans"
+        ]
+      },
+      "post": {
+        "operationId": "AdminPlanController_post",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePlanDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Create plan",
+        "tags": [
+          "Admin plans"
+        ]
+      }
+    },
+    "/api/admin/plans/catalog": {
+      "get": {
+        "operationId": "AdminPlanController_catalog",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Get plan catalog matrix",
+        "tags": [
+          "Admin plans"
+        ]
+      },
+      "post": {
+        "operationId": "AdminPlanController_upsertCatalog",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpsertPlanCatalogDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Upsert full plan catalog matrix",
+        "tags": [
+          "Admin plans"
+        ]
+      }
+    },
+    "/api/admin/plans/{id}": {
+      "patch": {
+        "operationId": "AdminPlanController_update",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdatePlanDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Update plan by id",
+        "tags": [
+          "Admin plans"
+        ]
+      },
+      "delete": {
+        "operationId": "AdminPlanController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Delete plan by id",
+        "tags": [
+          "Admin plans"
+        ]
+      }
+    },
+    "/api/user/referral": {
+      "get": {
+        "operationId": "ReferralUserController_getStats",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReferralStatsDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Получить реферальную статистику пользователя",
+        "tags": [
+          "Referral"
+        ]
+      }
+    },
+    "/api/user/referral/attach": {
+      "post": {
+        "operationId": "ReferralUserController_attachReferral",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AttachReferralDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReferralStatsDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Привязать пригласившего пользователя",
+        "tags": [
+          "Referral"
+        ]
+      }
+    },
+    "/api/support/me": {
+      "get": {
+        "operationId": "SupportController_getCurrentThread",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "Support"
+        ]
+      }
+    },
+    "/api/support/message": {
+      "post": {
+        "operationId": "SupportController_createMessage",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateSupportMessageDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "Support"
+        ]
+      }
+    },
+    "/api/support/message/photo": {
+      "post": {
+        "operationId": "SupportController_createPhotoMessage",
+        "parameters": [
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "description": "UUID v4 request identity for safe photo retries",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "image"
+                ],
+                "properties": {
+                  "image": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "text": {
+                    "type": "string",
+                    "maxLength": 1024
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "Support"
+        ]
+      }
+    },
+    "/api/support/messages/{messageId}/media": {
+      "get": {
+        "operationId": "SupportController_getMessageMedia",
+        "parameters": [
+          {
+            "name": "messageId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Private support photo bytes",
+            "content": {
+              "image/jpeg": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              },
+              "image/png": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              },
+              "image/webp": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Support media is unavailable"
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "Support"
+        ]
+      }
+    },
+    "/api/admin/support/threads": {
+      "get": {
+        "operationId": "AdminSupportController_listThreads",
+        "parameters": [
+          {
+            "name": "search",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pageSize",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "Admin support"
+        ]
+      }
+    },
+    "/api/admin/support/threads/{id}": {
+      "get": {
+        "operationId": "AdminSupportController_getThread",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "Admin support"
+        ]
+      }
+    },
+    "/api/admin/support/threads/{id}/reply": {
+      "post": {
+        "operationId": "AdminSupportController_reply",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdminReplySupportDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "Admin support"
+        ]
+      }
+    },
+    "/api/admin/support/threads/{threadId}/reply/photo": {
+      "post": {
+        "operationId": "AdminSupportController_replyPhoto",
+        "parameters": [
+          {
+            "name": "threadId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "description": "UUID v4 request identity for safe photo retries",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "image"
+                ],
+                "properties": {
+                  "image": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "text": {
+                    "type": "string",
+                    "maxLength": 1024
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "Admin support"
+        ]
+      }
+    },
+    "/api/admin/support/messages/{messageId}/media": {
+      "get": {
+        "operationId": "AdminSupportController_getMessageMedia",
+        "parameters": [
+          {
+            "name": "messageId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Private support photo bytes",
+            "content": {
+              "image/jpeg": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              },
+              "image/png": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              },
+              "image/webp": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Support media is unavailable"
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "Admin support"
+        ]
+      }
+    },
+    "/api/admin/support/threads/{id}/close": {
+      "patch": {
+        "operationId": "AdminSupportController_closeThread",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "Admin support"
+        ]
+      }
+    },
+    "/api/admin/analytics/money/overview": {
+      "get": {
+        "operationId": "AdminAnalyticsController_moneyOverview",
+        "parameters": [
+          {
+            "name": "preset",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "default": "LAST_30_DAYS",
+              "enum": [
+                "TODAY",
+                "YESTERDAY",
+                "LAST_7_DAYS",
+                "LAST_30_DAYS",
+                "CURRENT_MONTH",
+                "PREVIOUS_MONTH",
+                "CUSTOM"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "dateFrom",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "example": "2026-08-01",
+              "type": "string"
+            }
+          },
+          {
+            "name": "dateTo",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "example": "2026-08-02",
+              "type": "string"
+            }
+          },
+          {
+            "name": "provider",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "default": "ALL",
+              "enum": [
+                "ALL",
+                "YOOKASSA",
+                "PLATEGA"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "merchant",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "default": "ALL",
+              "enum": [
+                "ALL",
+                "SITE",
+                "BOT"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "planId",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "format": "uuid",
+              "type": "string"
+            }
+          },
+          {
+            "name": "promoCode",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "userSearch",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "referred",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminMoneyOverviewResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Get financial analytics overview",
+        "tags": [
+          "Admin analytics"
+        ]
+      }
+    },
+    "/api/admin/analytics/retention/overview": {
+      "get": {
+        "operationId": "AdminAnalyticsController_retentionOverview",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminRetentionOverviewResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Get lifetime current-state retention overview",
+        "tags": [
+          "Admin analytics"
+        ]
+      }
+    },
+    "/api/admin/analytics/retention/users": {
+      "get": {
+        "operationId": "AdminAnalyticsController_retentionUsers",
+        "parameters": [
+          {
+            "name": "search",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/Object"
+            }
+          },
+          {
+            "name": "pageSize",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/Object"
+            }
+          },
+          {
+            "name": "sortBy",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "default": "registeredAt",
+              "enum": [
+                "registeredAt",
+                "firstPaidAt",
+                "lastPaidAt",
+                "cashPayments",
+                "subscriptionEndsAt"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "sortDir",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "default": "DESC",
+              "enum": [
+                "ASC",
+                "DESC"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminRetentionUsersResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "List safe retention segment users",
+        "tags": [
+          "Admin analytics"
+        ]
+      }
+    },
+    "/api/admin/analytics/retention/cohorts": {
+      "get": {
+        "operationId": "AdminAnalyticsController_retentionCohorts",
+        "parameters": [
+          {
+            "name": "months",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "default": 12,
+              "enum": [
+                6,
+                12,
+                24
+              ],
+              "type": "number"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminRetentionCohortsResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Get registration cohorts with lifetime outcomes as of now",
+        "tags": [
+          "Admin analytics"
+        ]
+      }
+    },
+    "/api/admin/analytics/money/timeseries": {
+      "get": {
+        "operationId": "AdminAnalyticsController_moneyTimeseries",
+        "parameters": [
+          {
+            "name": "preset",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "default": "LAST_30_DAYS",
+              "enum": [
+                "TODAY",
+                "YESTERDAY",
+                "LAST_7_DAYS",
+                "LAST_30_DAYS",
+                "CURRENT_MONTH",
+                "PREVIOUS_MONTH",
+                "CUSTOM"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "dateFrom",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "example": "2026-08-01",
+              "type": "string"
+            }
+          },
+          {
+            "name": "dateTo",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "example": "2026-08-02",
+              "type": "string"
+            }
+          },
+          {
+            "name": "provider",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "default": "ALL",
+              "enum": [
+                "ALL",
+                "YOOKASSA",
+                "PLATEGA"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "merchant",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "default": "ALL",
+              "enum": [
+                "ALL",
+                "SITE",
+                "BOT"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "planId",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "format": "uuid",
+              "type": "string"
+            }
+          },
+          {
+            "name": "promoCode",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "userSearch",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "referred",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminMoneyTimeseriesResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Get daily financial analytics",
+        "tags": [
+          "Admin analytics"
+        ]
+      }
+    },
+    "/api/admin/analytics/money/breakdowns": {
+      "get": {
+        "operationId": "AdminAnalyticsController_moneyBreakdowns",
+        "parameters": [
+          {
+            "name": "preset",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "default": "LAST_30_DAYS",
+              "enum": [
+                "TODAY",
+                "YESTERDAY",
+                "LAST_7_DAYS",
+                "LAST_30_DAYS",
+                "CURRENT_MONTH",
+                "PREVIOUS_MONTH",
+                "CUSTOM"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "dateFrom",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "example": "2026-08-01",
+              "type": "string"
+            }
+          },
+          {
+            "name": "dateTo",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "example": "2026-08-02",
+              "type": "string"
+            }
+          },
+          {
+            "name": "provider",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "default": "ALL",
+              "enum": [
+                "ALL",
+                "YOOKASSA",
+                "PLATEGA"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "merchant",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "default": "ALL",
+              "enum": [
+                "ALL",
+                "SITE",
+                "BOT"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "planId",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "format": "uuid",
+              "type": "string"
+            }
+          },
+          {
+            "name": "promoCode",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "userSearch",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "referred",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminMoneyBreakdownsResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Get financial analytics breakdowns",
+        "tags": [
+          "Admin analytics"
+        ]
+      }
+    },
+    "/api/admin/analytics/money/payments": {
+      "get": {
+        "operationId": "AdminAnalyticsController_moneyPayments",
+        "parameters": [
+          {
+            "name": "preset",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "default": "LAST_30_DAYS",
+              "enum": [
+                "TODAY",
+                "YESTERDAY",
+                "LAST_7_DAYS",
+                "LAST_30_DAYS",
+                "CURRENT_MONTH",
+                "PREVIOUS_MONTH",
+                "CUSTOM"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "dateFrom",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "example": "2026-08-01",
+              "type": "string"
+            }
+          },
+          {
+            "name": "dateTo",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "example": "2026-08-02",
+              "type": "string"
+            }
+          },
+          {
+            "name": "provider",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "default": "ALL",
+              "enum": [
+                "ALL",
+                "YOOKASSA",
+                "PLATEGA"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "merchant",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "default": "ALL",
+              "enum": [
+                "ALL",
+                "SITE",
+                "BOT"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "planId",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "format": "uuid",
+              "type": "string"
+            }
+          },
+          {
+            "name": "promoCode",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "userSearch",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "referred",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "statuses",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "PENDING",
+                  "SUCCEEDED",
+                  "FAILED",
+                  "CANCELED",
+                  "EXPIRED",
+                  "REFUNDED"
+                ]
+              }
+            }
+          },
+          {
+            "name": "paymentType",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "default": "ALL",
+              "enum": [
+                "ALL",
+                "FIRST_PURCHASE",
+                "MANUAL_RENEWAL",
+                "RECURRENT",
+                "BONUS",
+                "PROMO_DISCOUNT"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/Object"
+            }
+          },
+          {
+            "name": "pageSize",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/Object"
+            }
+          },
+          {
+            "name": "sortBy",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "default": "paidAt",
+              "enum": [
+                "paidAt",
+                "createdAt",
+                "amount",
+                "status"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "sortDir",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "default": "DESC",
+              "enum": [
+                "ASC",
+                "DESC"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminPaymentListResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "List safe payments with server filtering and pagination",
+        "tags": [
+          "Admin analytics"
+        ]
+      }
+    },
+    "/api/admin/analytics/referrals/overview": {
+      "get": {
+        "operationId": "AdminAnalyticsController_referralOverview",
+        "parameters": [
+          {
+            "name": "preset",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "default": "LAST_30_DAYS",
+              "enum": [
+                "TODAY",
+                "YESTERDAY",
+                "LAST_7_DAYS",
+                "LAST_30_DAYS",
+                "CURRENT_MONTH",
+                "PREVIOUS_MONTH",
+                "CUSTOM"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "dateFrom",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "dateTo",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "referrerSearch",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "invitedSearch",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ledgerStatus",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "PENDING_WINDOW",
+                  "CALCULATION_PENDING",
+                  "AWARDED",
+                  "REJECTED"
+                ]
+              }
+            }
+          },
+          {
+            "name": "merchant",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "default": "ALL",
+              "enum": [
+                "ALL",
+                "SITE",
+                "BOT"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "planId",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "format": "uuid",
+              "type": "string"
+            }
+          },
+          {
+            "name": "promoCode",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/Object"
+            }
+          },
+          {
+            "name": "pageSize",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/Object"
+            }
+          },
+          {
+            "name": "sortBy",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "default": "registeredAt",
+              "enum": [
+                "registeredAt",
+                "firstPaidAt",
+                "successfulRevenue",
+                "awardedBonus"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "sortDir",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "default": "DESC",
+              "enum": [
+                "ASC",
+                "DESC"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminReferralOverviewResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Get referral analytics overview",
+        "tags": [
+          "Admin analytics"
+        ]
+      }
+    },
+    "/api/admin/analytics/referrals/referrers": {
+      "get": {
+        "operationId": "AdminAnalyticsController_referrers",
+        "parameters": [
+          {
+            "name": "preset",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "default": "LAST_30_DAYS",
+              "enum": [
+                "TODAY",
+                "YESTERDAY",
+                "LAST_7_DAYS",
+                "LAST_30_DAYS",
+                "CURRENT_MONTH",
+                "PREVIOUS_MONTH",
+                "CUSTOM"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "dateFrom",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "dateTo",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "referrerSearch",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "onlyWithInvited",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "onlyWithPayingInvited",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "metricScope",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "default": "LIFETIME",
+              "enum": [
+                "LIFETIME",
+                "PERIOD"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/Object"
+            }
+          },
+          {
+            "name": "pageSize",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/Object"
+            }
+          },
+          {
+            "name": "sortBy",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "default": "invitedUsers",
+              "enum": [
+                "invitedUsers",
+                "payingInvitedUsers",
+                "referredGrossRevenue",
+                "lifetimeAwardedBonus",
+                "currentWalletBalance",
+                "lastReferralAt"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "sortDir",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "default": "DESC",
+              "enum": [
+                "ASC",
+                "DESC"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminReferrerListResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "List per-referrer analytics with server filtering and pagination",
+        "tags": [
+          "Admin analytics"
+        ]
+      }
+    },
+    "/api/admin/analytics/referrals/referrers/{userId}/invites": {
+      "get": {
+        "operationId": "AdminAnalyticsController_referrerInvites",
+        "parameters": [
+          {
+            "name": "userId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "preset",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "default": "LAST_30_DAYS",
+              "enum": [
+                "TODAY",
+                "YESTERDAY",
+                "LAST_7_DAYS",
+                "LAST_30_DAYS",
+                "CURRENT_MONTH",
+                "PREVIOUS_MONTH",
+                "CUSTOM"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "dateFrom",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "dateTo",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "invitedSearch",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "paidState",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "default": "ALL",
+              "enum": [
+                "ALL",
+                "EVER_PAID",
+                "NEVER_PAID"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/Object"
+            }
+          },
+          {
+            "name": "pageSize",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/Object"
+            }
+          },
+          {
+            "name": "sortBy",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "default": "registeredAt",
+              "enum": [
+                "registeredAt",
+                "firstPaidAt",
+                "successfulRevenue"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "sortDir",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "default": "DESC",
+              "enum": [
+                "ASC",
+                "DESC"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminReferrerInvitesResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "List invited users for one referrer",
+        "tags": [
+          "Admin analytics"
+        ]
+      }
+    },
+    "/api/admin/analytics/referrals": {
+      "get": {
+        "operationId": "AdminAnalyticsController_referrals",
+        "parameters": [
+          {
+            "name": "preset",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "default": "LAST_30_DAYS",
+              "enum": [
+                "TODAY",
+                "YESTERDAY",
+                "LAST_7_DAYS",
+                "LAST_30_DAYS",
+                "CURRENT_MONTH",
+                "PREVIOUS_MONTH",
+                "CUSTOM"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "dateFrom",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "dateTo",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "referrerSearch",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "invitedSearch",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ledgerStatus",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "PENDING_WINDOW",
+                  "CALCULATION_PENDING",
+                  "AWARDED",
+                  "REJECTED"
+                ]
+              }
+            }
+          },
+          {
+            "name": "merchant",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "default": "ALL",
+              "enum": [
+                "ALL",
+                "SITE",
+                "BOT"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "planId",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "format": "uuid",
+              "type": "string"
+            }
+          },
+          {
+            "name": "promoCode",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/Object"
+            }
+          },
+          {
+            "name": "pageSize",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/Object"
+            }
+          },
+          {
+            "name": "sortBy",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "default": "registeredAt",
+              "enum": [
+                "registeredAt",
+                "firstPaidAt",
+                "successfulRevenue",
+                "awardedBonus"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "sortDir",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "default": "DESC",
+              "enum": [
+                "ASC",
+                "DESC"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminReferralListResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "List referral analytics with server filtering and pagination",
+        "tags": [
+          "Admin analytics"
+        ]
+      }
+    },
+    "/api/admin/analytics/overview": {
+      "get": {
+        "operationId": "AdminAnalyticsController_overview",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "Admin analytics"
+        ]
+      }
+    },
+    "/api/admin/analytics/sources": {
+      "get": {
+        "operationId": "AdminAnalyticsController_listSources",
+        "parameters": [
+          {
+            "name": "page",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pageSize",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "Admin analytics"
+        ]
+      },
+      "post": {
+        "operationId": "AdminAnalyticsController_createSource",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateTrafficSourceDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "Admin analytics"
+        ]
+      }
+    },
+    "/api/admin/analytics/sources/{id}": {
+      "patch": {
+        "operationId": "AdminAnalyticsController_updateSource",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateTrafficSourceDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "Admin analytics"
+        ]
+      },
+      "delete": {
+        "operationId": "AdminAnalyticsController_deleteSource",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "Admin analytics"
+        ]
+      }
+    },
+    "/api/admin/analytics/attributions": {
+      "get": {
+        "operationId": "AdminAnalyticsController_listAttributions",
+        "parameters": [
+          {
+            "name": "search",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pageSize",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "Admin analytics"
+        ]
+      }
+    },
+    "/api/user/attribution/claim": {
+      "post": {
+        "operationId": "UserAttributionController_claim",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClaimAttributionDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDto"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Привязать источник трафика к пользователю",
+        "tags": [
+          "User attribution"
+        ]
+      }
+    }
+  },
+  "info": {
+    "title": "VPN Backend API",
+    "description": "VPN backend API for Telegram bot, subscriptions, payments, and VPN access",
+    "version": "1.0",
+    "contact": {}
+  },
+  "tags": [],
+  "servers": [],
+  "components": {
+    "securitySchemes": {
+      "bearer": {
+        "scheme": "bearer",
+        "bearerFormat": "JWT",
+        "type": "http"
+      }
+    },
+    "schemas": {
+      "TgAuthDto": {
+        "type": "object",
+        "properties": {
+          "rawInitData": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "rawInitData"
+        ]
+      },
+      "TgAuthResponseDto": {
+        "type": "object",
+        "properties": {
+          "accessToken": {
+            "type": "string"
+          },
+          "isNewUser": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "accessToken",
+          "isNewUser"
+        ]
+      },
+      "ErrorDto": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "enum": [
+              "UNAUTHORIZED",
+              "FORBIDDEN",
+              "AUTH_FAIL",
+              "ENTITY_NOT_FOUND",
+              "ENTITY_CREATION_FAIL"
+            ],
+            "example": "ENTITY_CREATION_FAIL"
+          },
+          "error": {
+            "type": "string",
+            "example": "Bad Request"
+          },
+          "statusCode": {
+            "type": "number",
+            "example": 400
+          },
+          "description": {
+            "type": "string"
+          },
+          "messages": {
+            "example": [
+              "password|IS_NOT_EMPTY"
+            ],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "error",
+          "statusCode"
+        ]
+      },
+      "UserAuthDto": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "email",
+          "password"
+        ]
+      },
+      "EmailAuthResponseDto": {
+        "type": "object",
+        "properties": {
+          "accessToken": {
+            "type": "string"
+          },
+          "isNewUser": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "accessToken",
+          "isNewUser"
+        ]
+      },
+      "RefreshResponseDto": {
+        "type": "object",
+        "properties": {
+          "accessToken": {
+            "type": "string"
+          },
+          "refreshToken": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "accessToken",
+          "refreshToken"
+        ]
+      },
+      "TelegramAuthLinkResponseDto": {
+        "type": "object",
+        "properties": {
+          "linkUrl": {
+            "type": "string"
+          },
+          "requestToken": {
+            "type": "string"
+          },
+          "expiresAt": {
+            "format": "date-time",
+            "type": "string"
+          }
+        },
+        "required": [
+          "linkUrl",
+          "requestToken",
+          "expiresAt"
+        ]
+      },
+      "TelegramAuthStatusDto": {
+        "type": "object",
+        "properties": {
+          "requestToken": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "requestToken"
+        ]
+      },
+      "TelegramAuthStatusResponseDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "confirmed"
+            ]
+          },
+          "accessToken": {
+            "type": "string"
+          },
+          "isNewUser": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "User": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "createdAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "updatedAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "deletedAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "emailVerifiedAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "hasTemporaryWebCredentials": {
+            "type": "boolean"
+          },
+          "telegramId": {
+            "type": "number"
+          },
+          "telegramUsername": {
+            "type": "string"
+          },
+          "telegramFirstName": {
+            "type": "string"
+          },
+          "telegramLastName": {
+            "type": "string"
+          },
+          "telegramIsPremium": {
+            "type": "boolean"
+          },
+          "telegramLanguageCode": {
+            "type": "string"
+          },
+          "isBlocked": {
+            "type": "boolean"
+          },
+          "blockedAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "telegramLinkedAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "referralCode": {
+            "type": "string"
+          },
+          "referredByUserId": {
+            "type": "string"
+          },
+          "firstPaidAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "hasUsedTrial": {
+            "type": "boolean"
+          },
+          "trialUsedAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "totalReferralBonusDays": {
+            "type": "number"
+          },
+          "referralBonusBalanceRub": {
+            "type": "number"
+          },
+          "totalReferralBonusRub": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "id",
+          "createdAt",
+          "updatedAt",
+          "deletedAt",
+          "hasTemporaryWebCredentials",
+          "telegramId",
+          "telegramUsername",
+          "telegramFirstName",
+          "telegramLastName",
+          "telegramIsPremium",
+          "telegramLanguageCode",
+          "isBlocked",
+          "hasUsedTrial",
+          "totalReferralBonusDays",
+          "referralBonusBalanceRub",
+          "totalReferralBonusRub"
+        ]
+      },
+      "TelegramLinkResponseDto": {
+        "type": "object",
+        "properties": {
+          "linkUrl": {
+            "type": "string"
+          },
+          "expiresAt": {
+            "format": "date-time",
+            "type": "string"
+          }
+        },
+        "required": [
+          "linkUrl",
+          "expiresAt"
+        ]
+      },
+      "TelegramSiteLinkCodeDto": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "code"
+        ]
+      },
+      "Object": {
+        "type": "object",
+        "properties": {}
+      },
+      "AdminUserSubscriptionDto": {
+        "type": "object",
+        "properties": {
+          "state": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "planId": {
+            "type": "string"
+          },
+          "planTitle": {
+            "type": "string"
+          },
+          "endsAt": {
+            "type": "string"
+          },
+          "autoRenewEnabled": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "state",
+          "autoRenewEnabled"
+        ]
+      },
+      "AdminUserItemDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "telegramUsername": {
+            "type": "string"
+          },
+          "authChannels": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "EMAIL",
+                "TELEGRAM"
+              ]
+            }
+          },
+          "createdAt": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string"
+          },
+          "isBlocked": {
+            "type": "boolean"
+          },
+          "subscription": {
+            "$ref": "#/components/schemas/AdminUserSubscriptionDto"
+          },
+          "successfulPaidTotal": {
+            "type": "string"
+          },
+          "successfulPayments": {
+            "type": "number"
+          },
+          "lastPaidAt": {
+            "type": "string"
+          },
+          "referredUsersCount": {
+            "type": "number"
+          },
+          "wasReferred": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id",
+          "label",
+          "authChannels",
+          "createdAt",
+          "role",
+          "isBlocked",
+          "subscription",
+          "successfulPaidTotal",
+          "successfulPayments",
+          "referredUsersCount",
+          "wasReferred"
+        ]
+      },
+      "AdminUserListResponseDto": {
+        "type": "object",
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AdminUserItemDto"
+            }
+          },
+          "total": {
+            "type": "number"
+          },
+          "page": {
+            "type": "number"
+          },
+          "pageSize": {
+            "type": "number"
+          },
+          "totalPages": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "items",
+          "total",
+          "page",
+          "pageSize",
+          "totalPages"
+        ]
+      },
+      "AdminSafeUserDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "telegramUsername": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "label"
+        ]
+      },
+      "AdminSafePlanDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          }
+        }
+      },
+      "AdminPaymentItemDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "shortId": {
+            "type": "string"
+          },
+          "createdAt": {
+            "type": "string"
+          },
+          "paidAt": {
+            "type": "string"
+          },
+          "user": {
+            "$ref": "#/components/schemas/AdminSafeUserDto"
+          },
+          "merchant": {
+            "type": "string"
+          },
+          "provider": {
+            "type": "string"
+          },
+          "paymentType": {
+            "type": "string",
+            "enum": [
+              "FIRST_PURCHASE",
+              "MANUAL_RENEWAL",
+              "RECURRENT",
+              "BONUS",
+              "PROMO_DISCOUNT"
+            ]
+          },
+          "plan": {
+            "$ref": "#/components/schemas/AdminSafePlanDto"
+          },
+          "promoCode": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "string"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "activationStatus": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "shortId",
+          "createdAt",
+          "user",
+          "provider",
+          "paymentType",
+          "plan",
+          "amount",
+          "currency",
+          "status"
+        ]
+      },
+      "AdminUserPromoUsageDto": {
+        "type": "object",
+        "properties": {
+          "promoCode": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "appliedAt": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "promoCode",
+          "status"
+        ]
+      },
+      "AdminUserReferralSummaryDto": {
+        "type": "object",
+        "properties": {
+          "referrer": {
+            "$ref": "#/components/schemas/AdminSafeUserDto"
+          },
+          "referredUsersCount": {
+            "type": "number"
+          },
+          "referredPayingUsers": {
+            "type": "number"
+          },
+          "awardedBonusTotal": {
+            "type": "string"
+          },
+          "currentWalletBalance": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "referredUsersCount",
+          "referredPayingUsers",
+          "awardedBonusTotal",
+          "currentWalletBalance"
+        ]
+      },
+      "AdminUserSupportSummaryDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "messagesCount": {
+            "type": "number"
+          },
+          "lastMessageAt": {
+            "type": "string"
+          },
+          "lastUserMessageAt": {
+            "type": "string"
+          },
+          "lastAdminMessageAt": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "messagesCount"
+        ]
+      },
+      "AdminUserDetailsResponseDto": {
+        "type": "object",
+        "properties": {
+          "profile": {
+            "$ref": "#/components/schemas/AdminUserItemDto"
+          },
+          "paymentHistory": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AdminPaymentItemDto"
+            }
+          },
+          "paymentTotal": {
+            "type": "number"
+          },
+          "paymentPage": {
+            "type": "number"
+          },
+          "paymentPageSize": {
+            "type": "number"
+          },
+          "promoUsages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AdminUserPromoUsageDto"
+            }
+          },
+          "referral": {
+            "$ref": "#/components/schemas/AdminUserReferralSummaryDto"
+          },
+          "supportSummary": {
+            "$ref": "#/components/schemas/AdminUserSupportSummaryDto"
+          }
+        },
+        "required": [
+          "profile",
+          "paymentHistory",
+          "paymentTotal",
+          "paymentPage",
+          "paymentPageSize",
+          "promoUsages",
+          "referral",
+          "supportSummary"
+        ]
+      },
+      "AdminPlategaRecurrentAgreementDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "userId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "merchant": {
+            "type": "string",
+            "enum": [
+              "SITE",
+              "BOT"
+            ]
+          },
+          "status": {
+            "type": "string"
+          },
+          "providerStatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "planId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "planName": {
+            "type": "string",
+            "nullable": true
+          },
+          "planPeriodDays": {
+            "type": "number",
+            "nullable": true
+          },
+          "amount": {
+            "type": "number"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "cadence": {
+            "type": "string",
+            "enum": [
+              "MONTHLY",
+              "YEARLY"
+            ],
+            "nullable": true
+          },
+          "nextChargeAt": {
+            "format": "date-time",
+            "type": "string",
+            "nullable": true
+          },
+          "lastChargeAt": {
+            "format": "date-time",
+            "type": "string",
+            "nullable": true
+          },
+          "cancelledAt": {
+            "format": "date-time",
+            "type": "string",
+            "nullable": true
+          },
+          "consentAcceptedAt": {
+            "format": "date-time",
+            "type": "string",
+            "nullable": true
+          },
+          "consentLegalVersion": {
+            "type": "string",
+            "nullable": true
+          },
+          "canCancel": {
+            "type": "boolean"
+          },
+          "canReconcile": {
+            "type": "boolean"
+          },
+          "createdAt": {
+            "format": "date-time",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "userId",
+          "merchant",
+          "status",
+          "planId",
+          "amount",
+          "currency",
+          "canCancel",
+          "canReconcile",
+          "createdAt"
+        ]
+      },
+      "UpdateUserWalletDto": {
+        "type": "object",
+        "properties": {
+          "referralBonusBalanceRub": {
+            "type": "number",
+            "description": "Current user wallet balance in rubles",
+            "example": 0,
+            "minimum": 0
+          }
+        },
+        "required": [
+          "referralBonusBalanceRub"
+        ]
+      },
+      "UpdateUserBlockDto": {
+        "type": "object",
+        "properties": {
+          "isBlocked": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "isBlocked"
+        ]
+      },
+      "AdminConfigureSubscriptionDto": {
+        "type": "object",
+        "properties": {
+          "planId": {
+            "type": "string"
+          },
+          "endsAt": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "planId"
+        ]
+      },
+      "AdminUserAccessResponseDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "deliveryMode": {
+            "type": "string"
+          },
+          "subscriptionUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "expiresAt": {
+            "format": "date-time",
+            "type": "string",
+            "nullable": true
+          },
+          "planTitle": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "required": [
+          "deliveryMode"
+        ]
+      },
+      "Plan": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "createdAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "updatedAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "deletedAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "code": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "period": {
+            "type": "number"
+          },
+          "amount": {
+            "type": "number"
+          },
+          "devicesLimit": {
+            "type": "number",
+            "nullable": true
+          },
+          "isActive": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id",
+          "createdAt",
+          "updatedAt",
+          "deletedAt",
+          "name",
+          "period",
+          "amount",
+          "isActive"
+        ]
+      },
+      "Subscription": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "createdAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "updatedAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "deletedAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "userId": {
+            "type": "string"
+          },
+          "plan": {
+            "$ref": "#/components/schemas/Plan"
+          },
+          "nextPayAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "startAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "endsAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "graceEndsAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "isTrial": {
+            "type": "boolean"
+          },
+          "trialEndsAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "sourcePromoCodeId": {
+            "type": "string"
+          },
+          "lastProvisionedAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "accessDisabledAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "reminderState": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        },
+        "required": [
+          "id",
+          "createdAt",
+          "updatedAt",
+          "deletedAt",
+          "status",
+          "userId",
+          "plan",
+          "nextPayAt",
+          "startAt",
+          "isTrial"
+        ]
+      },
+      "CreateSubscriptionDto": {
+        "type": "object",
+        "properties": {
+          "planId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "planId"
+        ]
+      },
+      "ActionDto": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "string"
+          },
+          "planId": {
+            "type": "string"
+          },
+          "promoCode": {
+            "type": "string"
+          },
+          "referralCode": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "action"
+        ]
+      },
+      "AutoRenewResponseDto": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "DISABLED",
+              "ACTIVE",
+              "RETRY_SCHEDULED",
+              "MANUAL_ACTION_REQUIRED"
+            ]
+          },
+          "merchant": {
+            "type": "string",
+            "enum": [
+              "SITE",
+              "BOT"
+            ],
+            "nullable": true
+          },
+          "nextPaymentAt": {
+            "format": "date-time",
+            "type": "string",
+            "nullable": true
+          },
+          "lastPaymentAt": {
+            "format": "date-time",
+            "type": "string",
+            "nullable": true
+          },
+          "method": {
+            "type": "object",
+            "nullable": true
+          }
+        },
+        "required": [
+          "enabled",
+          "status",
+          "merchant",
+          "nextPaymentAt",
+          "lastPaymentAt",
+          "method"
+        ]
+      },
+      "AdminApplyPlanDto": {
+        "type": "object",
+        "properties": {
+          "planId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "planId"
+        ]
+      },
+      "PaymentCheckoutAvailabilityDto": {
+        "type": "object",
+        "properties": {
+          "available": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "available"
+        ]
+      },
+      "PaymentRecurrentCheckoutOptionDto": {
+        "type": "object",
+        "properties": {
+          "available": {
+            "type": "boolean"
+          },
+          "eligible": {
+            "type": "boolean"
+          },
+          "cadence": {
+            "type": "string",
+            "enum": [
+              "MONTHLY",
+              "YEARLY"
+            ],
+            "nullable": true
+          }
+        },
+        "required": [
+          "available",
+          "eligible",
+          "cadence"
+        ]
+      },
+      "PaymentCheckoutOptionsDto": {
+        "type": "object",
+        "properties": {
+          "planId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "oneTime": {
+            "$ref": "#/components/schemas/PaymentCheckoutAvailabilityDto"
+          },
+          "crypto": {
+            "$ref": "#/components/schemas/PaymentCheckoutAvailabilityDto"
+          },
+          "recurrent": {
+            "$ref": "#/components/schemas/PaymentRecurrentCheckoutOptionDto"
+          }
+        },
+        "required": [
+          "planId",
+          "oneTime",
+          "crypto",
+          "recurrent"
+        ]
+      },
+      "CreatePlategaCryptoPaymentDto": {
+        "type": "object",
+        "properties": {
+          "planId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "promoCode": {
+            "type": "string",
+            "maxLength": 64
+          }
+        },
+        "required": [
+          "planId"
+        ]
+      },
+      "YooKassaWebhookDto": {
+        "type": "object",
+        "properties": {}
+      },
+      "CreatePlategaRecurrentAgreementDto": {
+        "type": "object",
+        "properties": {
+          "planId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "consent": {
+            "type": "number",
+            "enum": [
+              true
+            ],
+            "description": "Explicit acceptance of the recurrent payment disclosure"
+          }
+        },
+        "required": [
+          "planId",
+          "consent"
+        ]
+      },
+      "PlategaRecurrentAgreementResponseDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "providerSubscriptionId": {
+            "type": "string",
+            "nullable": true
+          },
+          "merchant": {
+            "type": "string",
+            "enum": [
+              "SITE",
+              "BOT"
+            ]
+          },
+          "status": {
+            "type": "string"
+          },
+          "providerStatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "amount": {
+            "type": "number"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "durationDays": {
+            "type": "number"
+          },
+          "redirect": {
+            "type": "string",
+            "nullable": true
+          },
+          "nextChargeAt": {
+            "format": "date-time",
+            "type": "string",
+            "nullable": true
+          },
+          "lastChargeAt": {
+            "format": "date-time",
+            "type": "string",
+            "nullable": true
+          },
+          "cancelledAt": {
+            "format": "date-time",
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "format": "date-time",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "merchant",
+          "status",
+          "amount",
+          "currency",
+          "durationDays",
+          "createdAt"
+        ]
+      },
+      "PlategaSubscriptionStatusCallbackDto": {
+        "type": "object",
+        "properties": {
+          "Id": {
+            "type": "string"
+          },
+          "SubscriptionId": {
+            "type": "string"
+          },
+          "Amount": {
+            "type": "number"
+          },
+          "Currency": {
+            "type": "string"
+          },
+          "Status": {
+            "type": "string"
+          },
+          "PaymentMethod": {
+            "type": "number"
+          },
+          "Payload": {
+            "type": "string"
+          },
+          "NextChargeAt": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "required": [
+          "Id",
+          "SubscriptionId",
+          "Amount",
+          "Currency",
+          "Status",
+          "PaymentMethod"
+        ]
+      },
+      "PlategaChargeCallbackDto": {
+        "type": "object",
+        "properties": {
+          "Id": {
+            "type": "string"
+          },
+          "Amount": {
+            "type": "number"
+          },
+          "Currency": {
+            "type": "string"
+          },
+          "Status": {
+            "type": "string"
+          },
+          "PaymentMethod": {
+            "type": "number"
+          },
+          "SubscriptionId": {
+            "type": "string"
+          },
+          "Payload": {
+            "type": "string"
+          },
+          "NextChargeAt": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "required": [
+          "Id",
+          "Amount",
+          "Currency",
+          "Status",
+          "PaymentMethod",
+          "SubscriptionId"
+        ]
+      },
+      "RawAccessConfigDto": {
+        "type": "object",
+        "properties": {
+          "providerExternalId": {
+            "type": "string",
+            "nullable": true
+          },
+          "providerClientKey": {
+            "type": "string",
+            "nullable": true
+          },
+          "inboundKey": {
+            "type": "string",
+            "nullable": true
+          },
+          "configPayload": {
+            "type": "object",
+            "nullable": true
+          }
+        }
+      },
+      "UserAccessResponseDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "plan": {
+            "type": "string",
+            "nullable": true
+          },
+          "planCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "planTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "planDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "expiresAt": {
+            "format": "date-time",
+            "type": "string",
+            "nullable": true
+          },
+          "graceEndsAt": {
+            "format": "date-time",
+            "type": "string",
+            "nullable": true
+          },
+          "subscriptionUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "qrPayload": {
+            "type": "string",
+            "nullable": true
+          },
+          "rawConfig": {
+            "nullable": true,
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/RawAccessConfigDto"
+              }
+            ]
+          },
+          "deliveryMode": {
+            "type": "string"
+          },
+          "instructions": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "deliveryMode",
+          "instructions"
+        ]
+      },
+      "CreateServerNodeDto": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "region": {
+            "type": "string"
+          },
+          "providerType": {
+            "type": "string",
+            "enum": [
+              "REMNAWAVE",
+              "XUI"
+            ]
+          },
+          "baseUrl": {
+            "type": "string"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "priority": {
+            "type": "number"
+          },
+          "defaultAccessKey": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "code",
+          "name",
+          "region",
+          "providerType",
+          "baseUrl"
+        ]
+      },
+      "UpdateServerNodeDto": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "region": {
+            "type": "string"
+          },
+          "providerType": {
+            "type": "string",
+            "enum": [
+              "REMNAWAVE",
+              "XUI"
+            ]
+          },
+          "baseUrl": {
+            "type": "string"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "priority": {
+            "type": "number"
+          },
+          "defaultAccessKey": {
+            "type": "string"
+          }
+        }
+      },
+      "Meter": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "createdAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "updatedAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "deletedAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "code": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "unit": {
+            "type": "string"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "description": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "createdAt",
+          "updatedAt",
+          "deletedAt",
+          "code",
+          "name",
+          "isActive"
+        ]
+      },
+      "PlanLimit": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "createdAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "updatedAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "deletedAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "planId": {
+            "type": "string"
+          },
+          "meterId": {
+            "type": "string"
+          },
+          "includedUnits": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "id",
+          "createdAt",
+          "updatedAt",
+          "deletedAt",
+          "planId",
+          "meterId",
+          "includedUnits"
+        ]
+      },
+      "UsageEvent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "createdAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "updatedAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "deletedAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "runLogId": {
+            "type": "string"
+          },
+          "idempotencyKey": {
+            "type": "string"
+          },
+          "rawPayload": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        },
+        "required": [
+          "id",
+          "createdAt",
+          "updatedAt",
+          "deletedAt"
+        ]
+      },
+      "UsageLineItem": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "createdAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "updatedAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "deletedAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "usageEventId": {
+            "type": "string"
+          },
+          "meterId": {
+            "type": "string"
+          },
+          "qty": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "id",
+          "createdAt",
+          "updatedAt",
+          "deletedAt",
+          "usageEventId",
+          "meterId",
+          "qty"
+        ]
+      },
+      "CreatePromoCodeDto": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "FIRST_PAYMENT_PERCENT"
+            ]
+          },
+          "valuePercent": {
+            "type": "number"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "ACTIVE",
+              "INACTIVE"
+            ]
+          },
+          "maxUses": {
+            "type": "number"
+          },
+          "durationDays": {
+            "type": "number"
+          },
+          "devicesLimit": {
+            "type": "number"
+          },
+          "startsAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "expiresAt": {
+            "format": "date-time",
+            "type": "string"
+          }
+        },
+        "required": [
+          "code",
+          "valuePercent",
+          "durationDays",
+          "devicesLimit"
+        ]
+      },
+      "UpdatePromoCodeDto": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "FIRST_PAYMENT_PERCENT"
+            ]
+          },
+          "valuePercent": {
+            "type": "number"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "ACTIVE",
+              "INACTIVE"
+            ]
+          },
+          "maxUses": {
+            "type": "number"
+          },
+          "durationDays": {
+            "type": "number"
+          },
+          "devicesLimit": {
+            "type": "number"
+          },
+          "startsAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "expiresAt": {
+            "format": "date-time",
+            "type": "string"
+          }
+        }
+      },
+      "ValidatePromoCodeDto": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "planId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "code"
+        ]
+      },
+      "PaginatedMetaDocumented": {
+        "type": "object",
+        "properties": {
+          "itemsPerPage": {
+            "type": "number",
+            "title": "Number of items per page"
+          },
+          "totalItems": {
+            "type": "number",
+            "title": "Total number of items"
+          },
+          "currentPage": {
+            "type": "number",
+            "title": "Current requested page"
+          },
+          "totalPages": {
+            "type": "number",
+            "title": "Total number of pages"
+          },
+          "sortBy": {
+            "type": "array",
+            "title": "Sorting by columns",
+            "items": {
+              "type": "array",
+              "items": {
+                "oneOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "string",
+                    "enum": [
+                      "ASC",
+                      "DESC"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "searchBy": {
+            "title": "Search by fields",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "search": {
+            "type": "string",
+            "title": "Search term"
+          },
+          "select": {
+            "title": "List of selected fields",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "filter": {
+            "type": "object",
+            "title": "Filters that applied to the query",
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "itemsPerPage",
+          "totalItems",
+          "currentPage",
+          "totalPages",
+          "filter"
+        ]
+      },
+      "PaginatedLinksDocumented": {
+        "type": "object",
+        "properties": {
+          "first": {
+            "type": "string",
+            "title": "Link to first page"
+          },
+          "previous": {
+            "type": "string",
+            "title": "Link to previous page"
+          },
+          "current": {
+            "type": "string",
+            "title": "Link to current page"
+          },
+          "next": {
+            "type": "string",
+            "title": "Link to next page"
+          },
+          "last": {
+            "type": "string",
+            "title": "Link to last page"
+          }
+        }
+      },
+      "PaginatedDocumented": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "title": "Array of entities",
+            "additionalProperties": false,
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "meta": {
+            "title": "Pagination Metadata",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/PaginatedMetaDocumented"
+              }
+            ]
+          },
+          "links": {
+            "title": "Links to pages",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/PaginatedLinksDocumented"
+              }
+            ]
+          }
+        },
+        "required": [
+          "data",
+          "meta",
+          "links"
+        ]
+      },
+      "CreatePlanDto": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "period": {
+            "type": "number"
+          },
+          "amount": {
+            "type": "number"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "devicesLimit": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "name",
+          "period",
+          "amount"
+        ]
+      },
+      "UpsertPlanCatalogDto": {
+        "type": "object",
+        "properties": {
+          "plans": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "plans"
+        ]
+      },
+      "UpdatePlanDto": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "period": {
+            "type": "number"
+          },
+          "amount": {
+            "type": "number"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "devicesLimit": {
+            "type": "number"
+          }
+        }
+      },
+      "ReferralStatsDto": {
+        "type": "object",
+        "properties": {
+          "referralCode": {
+            "type": "string"
+          },
+          "telegramBotStartUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "invitedCount": {
+            "type": "number"
+          },
+          "bonusBalanceRub": {
+            "type": "number"
+          },
+          "totalBonusRub": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "referralCode",
+          "invitedCount",
+          "bonusBalanceRub",
+          "totalBonusRub"
+        ]
+      },
+      "AttachReferralDto": {
+        "type": "object",
+        "properties": {
+          "referralCode": {
+            "type": "string",
+            "description": "Referral code captured from Telegram deep link or website invite link",
+            "example": "ref_2iazzkb"
+          }
+        },
+        "required": [
+          "referralCode"
+        ]
+      },
+      "CreateSupportMessageDto": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string",
+            "example": "Здравствуйте, помогите подключиться"
+          }
+        },
+        "required": [
+          "text"
+        ]
+      },
+      "AdminReplySupportDto": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string",
+            "example": "Здравствуйте. Откройте раздел доступа в кабинете и отправьте скриншот ошибки, если проблема останется."
+          }
+        },
+        "required": [
+          "text"
+        ]
+      },
+      "AdminAnalyticsPeriodResponseDto": {
+        "type": "object",
+        "properties": {
+          "from": {
+            "type": "string"
+          },
+          "to": {
+            "type": "string"
+          },
+          "timezone": {
+            "type": "string",
+            "example": "Europe/Moscow"
+          },
+          "preset": {
+            "type": "string",
+            "enum": [
+              "TODAY",
+              "YESTERDAY",
+              "LAST_7_DAYS",
+              "LAST_30_DAYS",
+              "CURRENT_MONTH",
+              "PREVIOUS_MONTH",
+              "CUSTOM"
+            ]
+          }
+        },
+        "required": [
+          "from",
+          "to",
+          "timezone",
+          "preset"
+        ]
+      },
+      "AdminMoneyOverviewResponseDto": {
+        "type": "object",
+        "properties": {
+          "period": {
+            "$ref": "#/components/schemas/AdminAnalyticsPeriodResponseDto"
+          },
+          "grossRevenue": {
+            "type": "string"
+          },
+          "successfulPayments": {
+            "type": "number"
+          },
+          "uniquePayingUsers": {
+            "type": "number"
+          },
+          "averageCheck": {
+            "type": "string"
+          },
+          "firstPurchases": {
+            "type": "number"
+          },
+          "manualRenewals": {
+            "type": "number"
+          },
+          "recurrentPayments": {
+            "type": "number"
+          },
+          "failedPayments": {
+            "type": "number"
+          },
+          "canceledPayments": {
+            "type": "number"
+          },
+          "expiredPayments": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "period",
+          "grossRevenue",
+          "successfulPayments",
+          "uniquePayingUsers",
+          "averageCheck",
+          "firstPurchases",
+          "manualRenewals",
+          "recurrentPayments",
+          "failedPayments",
+          "canceledPayments",
+          "expiredPayments"
+        ]
+      },
+      "AdminRetentionOverviewResponseDto": {
+        "type": "object",
+        "properties": {
+          "asOf": {
+            "type": "string"
+          },
+          "timezone": {
+            "type": "string"
+          },
+          "scope": {
+            "type": "string"
+          },
+          "customerUsers": {
+            "type": "number"
+          },
+          "currentPaidUsers": {
+            "type": "number"
+          },
+          "activeRepeatPayers": {
+            "type": "number"
+          },
+          "repeatPayersEver": {
+            "type": "number"
+          },
+          "onePaymentNoPaidEntitlement": {
+            "type": "number"
+          },
+          "trialOnlyNoEntitlement": {
+            "type": "number"
+          },
+          "trialUsers": {
+            "type": "number"
+          },
+          "trialConvertedUsers": {
+            "type": "number"
+          },
+          "payingUsersEver": {
+            "type": "number"
+          },
+          "trialConversionRate": {
+            "type": "string"
+          },
+          "repeatPurchaseRate": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "asOf",
+          "timezone",
+          "scope",
+          "customerUsers",
+          "currentPaidUsers",
+          "activeRepeatPayers",
+          "repeatPayersEver",
+          "onePaymentNoPaidEntitlement",
+          "trialOnlyNoEntitlement",
+          "trialUsers",
+          "trialConvertedUsers",
+          "payingUsersEver",
+          "trialConversionRate",
+          "repeatPurchaseRate"
+        ]
+      },
+      "AdminRetentionUsersResponseDto": {
+        "type": "object",
+        "properties": {
+          "asOf": {
+            "type": "string"
+          },
+          "timezone": {
+            "type": "string"
+          },
+          "segment": {
+            "type": "string"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "total": {
+            "type": "number"
+          },
+          "page": {
+            "type": "number"
+          },
+          "pageSize": {
+            "type": "number"
+          },
+          "totalPages": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "asOf",
+          "timezone",
+          "segment",
+          "items",
+          "total",
+          "page",
+          "pageSize",
+          "totalPages"
+        ]
+      },
+      "AdminRetentionCohortsResponseDto": {
+        "type": "object",
+        "properties": {
+          "asOf": {
+            "type": "string"
+          },
+          "timezone": {
+            "type": "string"
+          },
+          "cohortType": {
+            "type": "string"
+          },
+          "outcomeMode": {
+            "type": "string"
+          },
+          "months": {
+            "type": "number"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          }
+        },
+        "required": [
+          "asOf",
+          "timezone",
+          "cohortType",
+          "outcomeMode",
+          "months",
+          "items"
+        ]
+      },
+      "AdminMoneyTimeseriesPointDto": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string"
+          },
+          "grossRevenue": {
+            "type": "string"
+          },
+          "successfulPayments": {
+            "type": "number"
+          },
+          "firstPurchases": {
+            "type": "number"
+          },
+          "manualRenewals": {
+            "type": "number"
+          },
+          "recurrentPayments": {
+            "type": "number"
+          },
+          "failedPayments": {
+            "type": "number"
+          },
+          "canceledPayments": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "date",
+          "grossRevenue",
+          "successfulPayments",
+          "firstPurchases",
+          "manualRenewals",
+          "recurrentPayments",
+          "failedPayments",
+          "canceledPayments"
+        ]
+      },
+      "AdminMoneyTimeseriesResponseDto": {
+        "type": "object",
+        "properties": {
+          "period": {
+            "$ref": "#/components/schemas/AdminAnalyticsPeriodResponseDto"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AdminMoneyTimeseriesPointDto"
+            }
+          }
+        },
+        "required": [
+          "period",
+          "items"
+        ]
+      },
+      "AdminBreakdownItemDto": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "successfulPayments": {
+            "type": "number"
+          },
+          "grossRevenue": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "key",
+          "label",
+          "successfulPayments",
+          "grossRevenue"
+        ]
+      },
+      "AdminPromoUsageBreakdownItemDto": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "usageCount": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "key",
+          "label",
+          "usageCount"
+        ]
+      },
+      "AdminMoneyBreakdownsResponseDto": {
+        "type": "object",
+        "properties": {
+          "period": {
+            "$ref": "#/components/schemas/AdminAnalyticsPeriodResponseDto"
+          },
+          "byMerchant": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AdminBreakdownItemDto"
+            }
+          },
+          "byProvider": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AdminBreakdownItemDto"
+            }
+          },
+          "byPaymentType": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AdminBreakdownItemDto"
+            }
+          },
+          "byPlan": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AdminBreakdownItemDto"
+            }
+          },
+          "byStatus": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AdminBreakdownItemDto"
+            }
+          },
+          "promoUsage": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AdminPromoUsageBreakdownItemDto"
+            }
+          }
+        },
+        "required": [
+          "period",
+          "byMerchant",
+          "byProvider",
+          "byPaymentType",
+          "byPlan",
+          "byStatus",
+          "promoUsage"
+        ]
+      },
+      "AdminPaymentListResponseDto": {
+        "type": "object",
+        "properties": {
+          "period": {
+            "$ref": "#/components/schemas/AdminAnalyticsPeriodResponseDto"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AdminPaymentItemDto"
+            }
+          },
+          "total": {
+            "type": "number"
+          },
+          "page": {
+            "type": "number"
+          },
+          "pageSize": {
+            "type": "number"
+          },
+          "totalPages": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "period",
+          "items",
+          "total",
+          "page",
+          "pageSize",
+          "totalPages"
+        ]
+      },
+      "AdminReferralOverviewResponseDto": {
+        "type": "object",
+        "properties": {
+          "period": {
+            "$ref": "#/components/schemas/AdminAnalyticsPeriodResponseDto"
+          },
+          "referredRegistrations": {
+            "type": "number"
+          },
+          "referredPayingUsers": {
+            "type": "number"
+          },
+          "successfulPayments": {
+            "type": "number"
+          },
+          "conversionPercent": {
+            "type": "string"
+          },
+          "referredGrossRevenue": {
+            "type": "string"
+          },
+          "awardedBonusTotal": {
+            "type": "string"
+          },
+          "pendingBonusCount": {
+            "type": "number"
+          },
+          "rejectedBonusCount": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "period",
+          "referredRegistrations",
+          "referredPayingUsers",
+          "successfulPayments",
+          "conversionPercent",
+          "referredGrossRevenue",
+          "awardedBonusTotal",
+          "pendingBonusCount",
+          "rejectedBonusCount"
+        ]
+      },
+      "AdminReferrerPeriodMetricsDto": {
+        "type": "object",
+        "properties": {
+          "invitedUsers": {
+            "type": "number"
+          },
+          "payingInvitedUsers": {
+            "type": "number"
+          },
+          "referredSuccessfulPayments": {
+            "type": "number"
+          },
+          "referredGrossRevenue": {
+            "type": "string"
+          },
+          "awardedBonus": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "invitedUsers",
+          "payingInvitedUsers",
+          "referredSuccessfulPayments",
+          "referredGrossRevenue",
+          "awardedBonus"
+        ]
+      },
+      "AdminReferrerItemDto": {
+        "type": "object",
+        "properties": {
+          "referrer": {
+            "$ref": "#/components/schemas/AdminSafeUserDto"
+          },
+          "invitedUsers": {
+            "type": "number"
+          },
+          "payingInvitedUsers": {
+            "type": "number"
+          },
+          "referralConversionPercent": {
+            "type": "string"
+          },
+          "referredSuccessfulPayments": {
+            "type": "number"
+          },
+          "referredGrossRevenue": {
+            "type": "string"
+          },
+          "lifetimeAwardedBonus": {
+            "type": "string"
+          },
+          "currentWalletBalance": {
+            "type": "string"
+          },
+          "firstReferralAt": {
+            "type": "string"
+          },
+          "lastReferralAt": {
+            "type": "string"
+          },
+          "lastAwardedAt": {
+            "type": "string"
+          },
+          "periodMetrics": {
+            "$ref": "#/components/schemas/AdminReferrerPeriodMetricsDto"
+          }
+        },
+        "required": [
+          "referrer",
+          "invitedUsers",
+          "payingInvitedUsers",
+          "referralConversionPercent",
+          "referredSuccessfulPayments",
+          "referredGrossRevenue",
+          "lifetimeAwardedBonus",
+          "currentWalletBalance",
+          "periodMetrics"
+        ]
+      },
+      "AdminReferrerListResponseDto": {
+        "type": "object",
+        "properties": {
+          "period": {
+            "$ref": "#/components/schemas/AdminAnalyticsPeriodResponseDto"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AdminReferrerItemDto"
+            }
+          },
+          "total": {
+            "type": "number"
+          },
+          "page": {
+            "type": "number"
+          },
+          "pageSize": {
+            "type": "number"
+          },
+          "totalPages": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "period",
+          "items",
+          "total",
+          "page",
+          "pageSize",
+          "totalPages"
+        ]
+      },
+      "AdminReferrerEarningsDto": {
+        "type": "object",
+        "properties": {
+          "currentMonth": {
+            "type": "string"
+          },
+          "previousMonth": {
+            "type": "string"
+          },
+          "allTime": {
+            "type": "string"
+          },
+          "timezone": {
+            "type": "string",
+            "example": "Europe/Moscow"
+          },
+          "currentMonthFrom": {
+            "type": "string"
+          },
+          "currentMonthTo": {
+            "type": "string"
+          },
+          "previousMonthFrom": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "currentMonth",
+          "previousMonth",
+          "allTime",
+          "timezone",
+          "currentMonthFrom",
+          "currentMonthTo",
+          "previousMonthFrom"
+        ]
+      },
+      "AdminReferrerInviteItemDto": {
+        "type": "object",
+        "properties": {
+          "invitedUser": {
+            "$ref": "#/components/schemas/AdminSafeUserDto"
+          },
+          "registeredAt": {
+            "type": "string"
+          },
+          "firstPaidAt": {
+            "type": "string"
+          },
+          "successfulPayments": {
+            "type": "number"
+          },
+          "successfulRevenue": {
+            "type": "string"
+          },
+          "awardedBonus": {
+            "type": "string"
+          },
+          "latestLedgerStatus": {
+            "type": "string"
+          },
+          "latestMerchant": {
+            "type": "string"
+          },
+          "latestPlan": {
+            "$ref": "#/components/schemas/AdminSafePlanDto"
+          },
+          "latestPromoCode": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "invitedUser",
+          "registeredAt",
+          "successfulPayments",
+          "successfulRevenue",
+          "awardedBonus",
+          "latestPlan"
+        ]
+      },
+      "AdminReferrerInvitesResponseDto": {
+        "type": "object",
+        "properties": {
+          "period": {
+            "$ref": "#/components/schemas/AdminAnalyticsPeriodResponseDto"
+          },
+          "referrer": {
+            "$ref": "#/components/schemas/AdminSafeUserDto"
+          },
+          "lifetimeAwardedBonus": {
+            "type": "string"
+          },
+          "currentWalletBalance": {
+            "type": "string"
+          },
+          "earnings": {
+            "$ref": "#/components/schemas/AdminReferrerEarningsDto"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AdminReferrerInviteItemDto"
+            }
+          },
+          "total": {
+            "type": "number"
+          },
+          "page": {
+            "type": "number"
+          },
+          "pageSize": {
+            "type": "number"
+          },
+          "totalPages": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "period",
+          "referrer",
+          "lifetimeAwardedBonus",
+          "currentWalletBalance",
+          "earnings",
+          "items",
+          "total",
+          "page",
+          "pageSize",
+          "totalPages"
+        ]
+      },
+      "AdminReferralItemDto": {
+        "type": "object",
+        "properties": {
+          "referrer": {
+            "$ref": "#/components/schemas/AdminSafeUserDto"
+          },
+          "invitedUser": {
+            "$ref": "#/components/schemas/AdminSafeUserDto"
+          },
+          "registeredAt": {
+            "type": "string"
+          },
+          "firstPaidAt": {
+            "type": "string"
+          },
+          "successfulPayments": {
+            "type": "number"
+          },
+          "successfulRevenue": {
+            "type": "string"
+          },
+          "awardedBonus": {
+            "type": "string"
+          },
+          "latestLedgerStatus": {
+            "type": "string"
+          },
+          "latestMerchant": {
+            "type": "string"
+          },
+          "latestPlan": {
+            "$ref": "#/components/schemas/AdminSafePlanDto"
+          },
+          "latestPromoCode": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "referrer",
+          "invitedUser",
+          "registeredAt",
+          "successfulPayments",
+          "successfulRevenue",
+          "awardedBonus",
+          "latestPlan"
+        ]
+      },
+      "AdminReferralListResponseDto": {
+        "type": "object",
+        "properties": {
+          "period": {
+            "$ref": "#/components/schemas/AdminAnalyticsPeriodResponseDto"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AdminReferralItemDto"
+            }
+          },
+          "total": {
+            "type": "number"
+          },
+          "page": {
+            "type": "number"
+          },
+          "pageSize": {
+            "type": "number"
+          },
+          "totalPages": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "period",
+          "items",
+          "total",
+          "page",
+          "pageSize",
+          "totalPages"
+        ]
+      },
+      "CreateTrafficSourceDto": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "websitePath": {
+            "type": "string",
+            "default": "/earn"
+          },
+          "isActive": {
+            "type": "boolean",
+            "default": true
+          }
+        },
+        "required": [
+          "code",
+          "name"
+        ]
+      },
+      "UpdateTrafficSourceDto": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "websitePath": {
+            "type": "string",
+            "default": "/earn"
+          },
+          "isActive": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      },
+      "ClaimAttributionDto": {
+        "type": "object",
+        "properties": {
+          "sourceCode": {
+            "type": "string"
+          },
+          "landingPath": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

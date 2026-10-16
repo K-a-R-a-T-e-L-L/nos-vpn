@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "properties": {
+    "linkUrl": { "type": "string" },
+    "expiresAt": { "format": "date-time", "type": "string" }
+  },
+  "required": ["linkUrl", "expiresAt"],
+  "x-readme-ref-name": "TelegramLinkResponseDto"
+}

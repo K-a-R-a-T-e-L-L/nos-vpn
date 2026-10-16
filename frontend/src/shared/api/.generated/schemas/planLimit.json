@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "createdAt": { "format": "date-time", "type": "string" },
+    "updatedAt": { "format": "date-time", "type": "string" },
+    "deletedAt": { "format": "date-time", "type": "string" },
+    "planId": { "type": "string" },
+    "meterId": { "type": "string" },
+    "includedUnits": { "type": "number" }
+  },
+  "required": [
+    "id",
+    "createdAt",
+    "updatedAt",
+    "deletedAt",
+    "planId",
+    "meterId",
+    "includedUnits"
+  ],
+  "x-readme-ref-name": "PlanLimit"
+}

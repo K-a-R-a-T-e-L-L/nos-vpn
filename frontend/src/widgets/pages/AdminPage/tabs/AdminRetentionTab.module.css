@@ -1,0 +1,33 @@
+.root { min-width: 0; }
+.header { min-width: 0; }
+.primaryKpis, .secondaryKpis { display: grid; gap: 12px; min-width: 0; }
+.primaryKpis { grid-template-columns: minmax(0, 1fr); }
+.secondaryKpis { grid-template-columns: minmax(0, 1fr); }
+.kpiCard, .mobileRow { min-width: 0; overflow-wrap: normal; }
+.primaryKpi { border-color: color-mix(in srgb, var(--mantine-color-brandCyan-6) 42%, var(--mantine-color-dark-6)); }
+.secondaryKpi { opacity: 0.94; }
+.kpiContent { min-width: 0; }
+.kpiValue { font-size: clamp(1.45rem, 2.6vw, 2rem); line-height: 1; white-space: nowrap; overflow-wrap: normal; }
+.secondaryKpi .kpiValue { font-size: 1.25rem; }
+.filters { min-width: 0; }
+.segmentSelect { flex: 1 1 260px; min-width: min(100%, 260px); }
+.searchInput { flex: 1 1 240px; min-width: min(100%, 240px); }
+.tableViewport { width: 100%; min-width: 0; overflow-x: auto; }
+.retentionTable, .cohortTable { width: 100%; table-layout: auto; }
+.retentionTable th, .cohortTable th, .noWrap, .actionCell { white-space: nowrap; overflow-wrap: normal; }
+.userCell { overflow-wrap: normal; word-break: normal; min-width: 12rem; }
+.actionCell { width: 1%; }
+.rateCell { min-width: 86px; }
+.cohortDiagnostics { min-width: 190px; overflow-wrap: normal; }
+.mobileRow { overflow-wrap: normal; }
+.srOnly { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.cohortTable tr[data-empty-cohort="true"], .mobileRow[data-empty-cohort="true"] { opacity: 0.64; }
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .primaryKpis, .secondaryKpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1200px) {
+  .primaryKpis { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .secondaryKpis { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}

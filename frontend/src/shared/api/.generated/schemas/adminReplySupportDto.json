@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "properties": {
+    "text": {
+      "type": "string",
+      "example": "Здравствуйте. Откройте раздел доступа в кабинете и отправьте скриншот ошибки, если проблема останется."
+    }
+  },
+  "required": ["text"],
+  "x-readme-ref-name": "AdminReplySupportDto"
+}

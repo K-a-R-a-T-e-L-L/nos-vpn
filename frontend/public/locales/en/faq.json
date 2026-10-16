@@ -1,0 +1,8 @@
+{
+  "title": "Frequently asked questions",
+  "description": "Starter answers for common setup questions.",
+  "q1": "Can I remove Mantine and keep the architecture?",
+  "a1": "Yes. UI layer is isolated, so you can swap components and keep routing, i18n and API structure.",
+  "q2": "Where should business logic go?",
+  "a2": "Place domain logic in entities/features and keep pages/widgets as composition layer."
+}

@@ -1,0 +1,10 @@
+{
+  "type": "object",
+  "properties": {
+    "status": { "type": "string", "enum": ["pending", "confirmed"] },
+    "accessToken": { "type": "string" },
+    "isNewUser": { "type": "boolean" }
+  },
+  "required": ["status"],
+  "x-readme-ref-name": "TelegramAuthStatusResponseDto"
+}

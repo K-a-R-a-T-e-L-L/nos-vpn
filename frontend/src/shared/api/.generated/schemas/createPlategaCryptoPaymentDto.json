@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "properties": {
+    "planId": { "type": "string", "format": "uuid" },
+    "promoCode": { "type": "string", "maxLength": 64 }
+  },
+  "required": ["planId"],
+  "x-readme-ref-name": "CreatePlategaCryptoPaymentDto"
+}

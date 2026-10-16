@@ -1,0 +1,90 @@
+export const BOT_MENU = {
+    MENU: 'Меню',
+    BACK: 'Назад',
+    TARIFFS: 'Тарифы',
+    MY_SUBSCRIPTION: 'Моя подписка',
+    GET_ACCESS: 'Получить доступ',
+    RENEW: 'Продлить доступ',
+    REFERRAL: 'Пригласить друга',
+    WALLET: 'Кошелек',
+    FAQ: 'FAQ',
+    INFO: 'Информация',
+    SUPPORT: 'Поддержка',
+} as const
+
+export const BOT_OFFICIAL_CHANNEL = {
+    username: '@your_vpn_channel',
+    url: 'https://t.me/your_vpn_channel',
+} as const
+
+export const BOT_INLINE_LABEL = {
+    GET_ACCESS: 'Получить доступ ✅',
+    MY_SUBSCRIPTION: 'Моя подписка ⚙️',
+    RENEW: 'Продлить доступ 💵',
+    TARIFFS: 'Тарифы ⭐',
+    REFERRAL: 'Пригласить друга 🌟',
+    WALLET: 'Кошелек 💰',
+    FAQ: 'FAQ ❓',
+    SUPPORT: 'Поддержка 💬',
+    INFO: 'Информация 🌐',
+} as const
+
+export const BOT_SUBSCRIPTION_LABEL = {
+    GET_LINK: 'Получить ссылку 🔗',
+    RENEW: 'Продлить доступ 💵',
+    CHOOSE_OTHER_TARIFF: 'Выбрать другой тариф ⭐',
+    SUPPORT: 'Поддержка 💬',
+} as const
+
+export const BOT_AUTO_RENEW_LABEL = {
+    ENABLE: '🔄 Включить автопродление',
+    DISABLE: '⛔ Отключить автопродление',
+    MANUAL: '💳 Оплатить вручную',
+} as const
+
+export const BOT_CALLBACK = {
+    START_TARIFFS: 'start:tariffs',
+    START_TRY_FREE: 'start:try_free',
+    START_HAS_SUBSCRIPTION: 'start:has_subscription',
+    START_NEW_USER: 'start:new_user',
+    START_LINK_SITE_ACCOUNT: 'start:link_site_account',
+    TELEGRAM_LINK_CONTINUE: 'telegram_link:continue',
+    CHANNEL_CHECK: 'channel:check',
+    TARIFFS: 'menu:tariffs',
+    MY_SUBSCRIPTION: 'menu:my_subscription',
+    GET_ACCESS: 'menu:get_access',
+    GET_ACCESS_QR: 'menu:get_access_qr',
+    RENEW: 'menu:renew',
+    REFERRAL: 'menu:referral',
+    WALLET: 'menu:wallet',
+    FAQ: 'menu:faq',
+    INFO: 'menu:info',
+    SUPPORT: 'menu:support',
+    BACK: 'menu:back',
+    BUY_PLAN_BY_CODE_PREFIX: 'buy_code:',
+    BUY_PLAN_DIRECT_BY_CODE_PREFIX: 'buy_direct_code:',
+    PAY_PLAN_BY_CODE_PREFIX: 'pay_code:',
+    PROMO_PLAN_BY_CODE_PREFIX: 'promo_code:',
+    PAY_BONUS_PLAN_BY_CODE_PREFIX: 'bonus_buy_code:',
+    TARIFF_PERIOD_PREFIX: 'tariff_period:',
+    TARIFF_DEVICE_PREFIX: 'tariff_device:',
+    TARIFF_CONTINUE_PREFIX: 'tariff_continue:',
+    START_TRIAL: 'trial:start',
+    RENEW_NOW: 'renew:now',
+    RENEW_WITH_BONUS: 'renew:bonus',
+    CHECK_PAYMENT: 'payment:check',
+    PAYMENT_METHOD_ONE_PREFIX: 'pm:one:',
+    PAYMENT_METHOD_CRYPTO_PREFIX: 'pm:crypto:',
+    PAYMENT_METHOD_RECURRENT_REVIEW_PREFIX: 'pm:rec:review:',
+    PAYMENT_METHOD_RECURRENT_CONFIRM_PREFIX: 'pm:rec:confirm:',
+    PAYMENT_METHOD_BACK_PREFIX: 'pm:back:',
+    AUTO_RENEW_ENABLE: 'auto_renew:enable',
+    AUTO_RENEW_DISABLE: 'auto_renew:disable',
+    SUPPORT_BEGIN: 'support:begin',
+    SUPPORT_CANCEL: 'support:cancel',
+    SUPPORT_ADMIN_REPLY_PREFIX: 'support:admin_reply:',
+    SUPPORT_ADMIN_REPLY_CANCEL: 'support:admin_reply:cancel',
+    SUPPORT_ADMIN_RETRY_PREFIX: 'support:admin_retry:',
+    ADMIN_BROADCAST_SEND: 'admin:broadcast:send',
+    ADMIN_BROADCAST_CANCEL: 'admin:broadcast:cancel',
+} as const

@@ -1,0 +1,10 @@
+{
+  "type": "object",
+  "properties": {
+    "providerExternalId": { "type": "string", "nullable": true },
+    "providerClientKey": { "type": "string", "nullable": true },
+    "inboundKey": { "type": "string", "nullable": true },
+    "configPayload": { "type": "object", "nullable": true }
+  },
+  "x-readme-ref-name": "RawAccessConfigDto"
+}

@@ -1,0 +1,314 @@
+﻿.page {
+  position: relative;
+}
+
+.page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: linear-gradient(to bottom, black, transparent 82%);
+  opacity: 0.4;
+}
+
+.hero {
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  min-height: 32px;
+  padding: 8px 14px 9px;
+  border-radius: 999px;
+  border: 1px solid rgba(66, 248, 255, 0.36);
+  background: rgba(66, 248, 255, 0.09);
+  color: #d8fbff;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transform: rotate(-1.4deg);
+}
+
+.heading {
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.sub {
+  max-width: 760px;
+  color: rgba(247, 247, 242, 0.72);
+}
+
+.overviewCard {
+  position: relative;
+  overflow: hidden;
+  border-radius: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(90, 255, 40, 0.08),
+      transparent 24%
+    ),
+    linear-gradient(145deg, rgba(18, 27, 20, 0.96), rgba(11, 18, 14, 0.96));
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
+}
+
+.processBadge {
+  width: fit-content;
+}
+
+.overviewText {
+  max-width: 760px;
+  color: rgba(247, 247, 242, 0.72);
+}
+
+.overviewGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.overviewStep {
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.035);
+}
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.selectWrap {
+  min-width: 220px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.androidGrid,
+.windowsGrid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.clientCard {
+  position: relative;
+  min-height: 58px;
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(30, 36, 46, 0.82);
+  cursor: pointer;
+  transition:
+    transform 0.22s ease,
+    border-color 0.22s ease,
+    background-color 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.clientCard::before {
+  content: "";
+  position: absolute;
+  right: -58px;
+  top: -62px;
+  width: 148px;
+  height: 148px;
+  border-radius: 50%;
+  background: rgba(90, 255, 40, 0.09);
+  transition:
+    background-color 0.22s ease,
+    transform 0.22s ease;
+}
+
+.clientCard:hover {
+  transform: translateY(-3px);
+  border-color: rgba(66, 248, 255, 0.38);
+  background: rgba(39, 47, 58, 0.9);
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.26),
+    inset 0 0 0 1px rgba(66, 248, 255, 0.12);
+}
+
+.clientCard:hover::before {
+  background: rgba(90, 255, 40, 0.18);
+  transform: scale(1.06);
+}
+
+.clientCardActive {
+  border-color: rgba(66, 248, 255, 0.62);
+  background:
+    linear-gradient(180deg, rgba(66, 248, 255, 0.12), rgba(66, 248, 255, 0.06)),
+    rgba(31, 42, 52, 0.96);
+  box-shadow:
+    0 0 0 1px rgba(66, 248, 255, 0.18),
+    0 18px 48px rgba(11, 181, 255, 0.16);
+}
+
+.clientCardActive::before {
+  background: rgba(66, 248, 255, 0.18);
+}
+
+.recommendedDot {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ffd21c;
+  box-shadow: 0 0 12px rgba(255, 210, 28, 0.55);
+  z-index: 3;
+}
+
+.clientInner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 58px;
+  padding: 14px 12px 14px 20px;
+}
+
+.clientName {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.clientCardActive .clientName {
+  color: #5eefff;
+}
+
+.clientMark {
+  font-size: 60px;
+  line-height: 0.7;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.12);
+  user-select: none;
+}
+
+.detailCard {
+  position: relative;
+  overflow: hidden;
+  border-radius: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(66, 248, 255, 0.08),
+      transparent 22%
+    ),
+    linear-gradient(145deg, rgba(17, 28, 24, 0.96), rgba(10, 17, 15, 0.96));
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.32);
+}
+
+.detailTop {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: start;
+}
+
+.downloadButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.stepsCard {
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.stepsColumns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--mantine-spacing-md);
+  align-items: stretch;
+}
+
+.stepsList {
+  display: grid;
+  gap: 10px;
+}
+
+.stepRow {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.supportRow {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 18px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+@media (max-width: 75em) {
+  .overviewGrid,
+  .grid,
+  .androidGrid,
+  .windowsGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 48em) {
+  .topBar,
+  .detailTop {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+
+  .selectWrap {
+    min-width: 0;
+  }
+
+  .overviewGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .grid,
+  .androidGrid,
+  .windowsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 36em) {
+  .grid,
+  .androidGrid,
+  .windowsGrid,
+  .stepsColumns {
+    grid-template-columns: 1fr;
+  }
+
+  .downloadButtons > * {
+    width: 100%;
+  }
+
+  .supportRow {
+    padding: 14px;
+  }
+}

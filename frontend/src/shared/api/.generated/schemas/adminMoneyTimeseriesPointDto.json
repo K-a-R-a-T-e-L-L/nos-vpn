@@ -1,0 +1,24 @@
+{
+  "type": "object",
+  "properties": {
+    "date": { "type": "string" },
+    "grossRevenue": { "type": "string" },
+    "successfulPayments": { "type": "number" },
+    "firstPurchases": { "type": "number" },
+    "manualRenewals": { "type": "number" },
+    "recurrentPayments": { "type": "number" },
+    "failedPayments": { "type": "number" },
+    "canceledPayments": { "type": "number" }
+  },
+  "required": [
+    "date",
+    "grossRevenue",
+    "successfulPayments",
+    "firstPurchases",
+    "manualRenewals",
+    "recurrentPayments",
+    "failedPayments",
+    "canceledPayments"
+  ],
+  "x-readme-ref-name": "AdminMoneyTimeseriesPointDto"
+}

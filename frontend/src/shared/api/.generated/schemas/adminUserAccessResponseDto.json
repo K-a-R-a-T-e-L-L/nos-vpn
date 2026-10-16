@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "properties": {
+    "status": { "type": "string", "nullable": true },
+    "deliveryMode": { "type": "string" },
+    "subscriptionUrl": { "type": "string", "nullable": true },
+    "expiresAt": { "format": "date-time", "type": "string", "nullable": true },
+    "planTitle": { "type": "string", "nullable": true }
+  },
+  "required": ["deliveryMode"],
+  "x-readme-ref-name": "AdminUserAccessResponseDto"
+}

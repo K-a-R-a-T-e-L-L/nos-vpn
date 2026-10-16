@@ -1,0 +1,24 @@
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "createdAt": { "format": "date-time", "type": "string" },
+    "updatedAt": { "format": "date-time", "type": "string" },
+    "deletedAt": { "format": "date-time", "type": "string" },
+    "code": { "type": "string" },
+    "name": { "type": "string" },
+    "unit": { "type": "string" },
+    "isActive": { "type": "boolean" },
+    "description": { "type": "string" }
+  },
+  "required": [
+    "id",
+    "createdAt",
+    "updatedAt",
+    "deletedAt",
+    "code",
+    "name",
+    "isActive"
+  ],
+  "x-readme-ref-name": "Meter"
+}

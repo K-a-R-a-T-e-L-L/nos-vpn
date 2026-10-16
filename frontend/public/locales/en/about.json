@@ -1,0 +1,4 @@
+{
+  "title": "About Template",
+  "description": "The template keeps only reusable infrastructure: layout, providers, i18n and API generation."
+}

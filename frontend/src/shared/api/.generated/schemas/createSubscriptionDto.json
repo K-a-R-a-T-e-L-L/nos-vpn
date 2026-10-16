@@ -1,0 +1,6 @@
+{
+  "type": "object",
+  "properties": { "planId": { "type": "string" } },
+  "required": ["planId"],
+  "x-readme-ref-name": "CreateSubscriptionDto"
+}

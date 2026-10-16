@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "properties": {
+    "key": { "type": "string" },
+    "label": { "type": "string" },
+    "successfulPayments": { "type": "number" },
+    "grossRevenue": { "type": "string" }
+  },
+  "required": ["key", "label", "successfulPayments", "grossRevenue"],
+  "x-readme-ref-name": "AdminBreakdownItemDto"
+}

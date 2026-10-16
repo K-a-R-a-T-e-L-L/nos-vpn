@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "properties": {
+    "asOf": { "type": "string" },
+    "timezone": { "type": "string" },
+    "cohortType": { "type": "string" },
+    "outcomeMode": { "type": "string" },
+    "months": { "type": "number" },
+    "items": { "type": "array", "items": { "type": "object" } }
+  },
+  "required": [
+    "asOf",
+    "timezone",
+    "cohortType",
+    "outcomeMode",
+    "months",
+    "items"
+  ],
+  "x-readme-ref-name": "AdminRetentionCohortsResponseDto"
+}

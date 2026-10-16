@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "properties": {
+    "code": { "type": "string" },
+    "name": { "type": "string" },
+    "type": { "type": "string", "enum": ["FIRST_PAYMENT_PERCENT"] },
+    "valuePercent": { "type": "number" },
+    "status": { "type": "string", "enum": ["ACTIVE", "INACTIVE"] },
+    "maxUses": { "type": "number" },
+    "durationDays": { "type": "number" },
+    "devicesLimit": { "type": "number" },
+    "startsAt": { "format": "date-time", "type": "string" },
+    "expiresAt": { "format": "date-time", "type": "string" }
+  },
+  "required": ["code", "valuePercent", "durationDays", "devicesLimit"],
+  "x-readme-ref-name": "CreatePromoCodeDto"
+}

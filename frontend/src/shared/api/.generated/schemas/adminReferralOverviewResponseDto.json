@@ -1,0 +1,47 @@
+{
+  "type": "object",
+  "properties": {
+    "period": {
+      "type": "object",
+      "properties": {
+        "from": { "type": "string" },
+        "to": { "type": "string" },
+        "timezone": { "type": "string", "example": "Europe/Moscow" },
+        "preset": {
+          "type": "string",
+          "enum": [
+            "TODAY",
+            "YESTERDAY",
+            "LAST_7_DAYS",
+            "LAST_30_DAYS",
+            "CURRENT_MONTH",
+            "PREVIOUS_MONTH",
+            "CUSTOM"
+          ]
+        }
+      },
+      "required": ["from", "to", "timezone", "preset"],
+      "x-readme-ref-name": "AdminAnalyticsPeriodResponseDto"
+    },
+    "referredRegistrations": { "type": "number" },
+    "referredPayingUsers": { "type": "number" },
+    "successfulPayments": { "type": "number" },
+    "conversionPercent": { "type": "string" },
+    "referredGrossRevenue": { "type": "string" },
+    "awardedBonusTotal": { "type": "string" },
+    "pendingBonusCount": { "type": "number" },
+    "rejectedBonusCount": { "type": "number" }
+  },
+  "required": [
+    "period",
+    "referredRegistrations",
+    "referredPayingUsers",
+    "successfulPayments",
+    "conversionPercent",
+    "referredGrossRevenue",
+    "awardedBonusTotal",
+    "pendingBonusCount",
+    "rejectedBonusCount"
+  ],
+  "x-readme-ref-name": "AdminReferralOverviewResponseDto"
+}

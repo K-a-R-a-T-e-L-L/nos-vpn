@@ -1,0 +1,34 @@
+{
+  "type": "object",
+  "properties": {
+    "planId": { "type": "string", "format": "uuid" },
+    "oneTime": {
+      "type": "object",
+      "properties": { "available": { "type": "boolean" } },
+      "required": ["available"],
+      "x-readme-ref-name": "PaymentCheckoutAvailabilityDto"
+    },
+    "crypto": {
+      "type": "object",
+      "properties": { "available": { "type": "boolean" } },
+      "required": ["available"],
+      "x-readme-ref-name": "PaymentCheckoutAvailabilityDto"
+    },
+    "recurrent": {
+      "type": "object",
+      "properties": {
+        "available": { "type": "boolean" },
+        "eligible": { "type": "boolean" },
+        "cadence": {
+          "type": "string",
+          "enum": ["MONTHLY", "YEARLY"],
+          "nullable": true
+        }
+      },
+      "required": ["available", "eligible", "cadence"],
+      "x-readme-ref-name": "PaymentRecurrentCheckoutOptionDto"
+    }
+  },
+  "required": ["planId", "oneTime", "crypto", "recurrent"],
+  "x-readme-ref-name": "PaymentCheckoutOptionsDto"
+}

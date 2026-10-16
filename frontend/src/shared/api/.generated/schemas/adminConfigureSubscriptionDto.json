@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "properties": {
+    "planId": { "type": "string" },
+    "endsAt": { "type": "string" }
+  },
+  "required": ["planId"],
+  "x-readme-ref-name": "AdminConfigureSubscriptionDto"
+}

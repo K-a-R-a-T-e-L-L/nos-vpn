@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "properties": {
+    "text": {
+      "type": "string",
+      "example": "Здравствуйте, помогите подключиться"
+    }
+  },
+  "required": ["text"],
+  "x-readme-ref-name": "CreateSupportMessageDto"
+}

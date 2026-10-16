@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "code": { "type": "string" },
+    "title": { "type": "string" }
+  },
+  "x-readme-ref-name": "AdminSafePlanDto"
+}

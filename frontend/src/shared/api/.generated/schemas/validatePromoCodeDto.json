@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "properties": {
+    "code": { "type": "string" },
+    "planId": { "type": "string" }
+  },
+  "required": ["code"],
+  "x-readme-ref-name": "ValidatePromoCodeDto"
+}

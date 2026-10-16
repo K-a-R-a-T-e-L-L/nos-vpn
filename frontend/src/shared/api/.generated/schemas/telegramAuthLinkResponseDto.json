@@ -1,0 +1,10 @@
+{
+  "type": "object",
+  "properties": {
+    "linkUrl": { "type": "string" },
+    "requestToken": { "type": "string" },
+    "expiresAt": { "format": "date-time", "type": "string" }
+  },
+  "required": ["linkUrl", "requestToken", "expiresAt"],
+  "x-readme-ref-name": "TelegramAuthLinkResponseDto"
+}

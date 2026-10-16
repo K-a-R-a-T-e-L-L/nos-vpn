@@ -1,0 +1,9 @@
+export enum AdminAnalyticsPeriodPreset {
+    TODAY = 'TODAY',
+    YESTERDAY = 'YESTERDAY',
+    LAST_7_DAYS = 'LAST_7_DAYS',
+    LAST_30_DAYS = 'LAST_30_DAYS',
+    CURRENT_MONTH = 'CURRENT_MONTH',
+    PREVIOUS_MONTH = 'PREVIOUS_MONTH',
+    CUSTOM = 'CUSTOM',
+}

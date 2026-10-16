@@ -1,0 +1,8 @@
+{
+  "type": "object",
+  "properties": {
+    "sourceCode": { "type": "string" },
+    "landingPath": { "type": "string" }
+  },
+  "x-readme-ref-name": "ClaimAttributionDto"
+}

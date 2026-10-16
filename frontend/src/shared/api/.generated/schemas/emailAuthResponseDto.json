@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "properties": {
+    "accessToken": { "type": "string" },
+    "isNewUser": { "type": "boolean" }
+  },
+  "required": ["accessToken", "isNewUser"],
+  "x-readme-ref-name": "EmailAuthResponseDto"
+}

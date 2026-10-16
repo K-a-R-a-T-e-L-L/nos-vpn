@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "properties": {
+    "status": { "type": "string" },
+    "messagesCount": { "type": "number" },
+    "lastMessageAt": { "type": "string" },
+    "lastUserMessageAt": { "type": "string" },
+    "lastAdminMessageAt": { "type": "string" }
+  },
+  "required": ["messagesCount"],
+  "x-readme-ref-name": "AdminUserSupportSummaryDto"
+}

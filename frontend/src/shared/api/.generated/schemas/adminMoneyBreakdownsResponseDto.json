@@ -1,0 +1,120 @@
+{
+  "type": "object",
+  "properties": {
+    "period": {
+      "type": "object",
+      "properties": {
+        "from": { "type": "string" },
+        "to": { "type": "string" },
+        "timezone": { "type": "string", "example": "Europe/Moscow" },
+        "preset": {
+          "type": "string",
+          "enum": [
+            "TODAY",
+            "YESTERDAY",
+            "LAST_7_DAYS",
+            "LAST_30_DAYS",
+            "CURRENT_MONTH",
+            "PREVIOUS_MONTH",
+            "CUSTOM"
+          ]
+        }
+      },
+      "required": ["from", "to", "timezone", "preset"],
+      "x-readme-ref-name": "AdminAnalyticsPeriodResponseDto"
+    },
+    "byMerchant": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "key": { "type": "string" },
+          "label": { "type": "string" },
+          "successfulPayments": { "type": "number" },
+          "grossRevenue": { "type": "string" }
+        },
+        "required": ["key", "label", "successfulPayments", "grossRevenue"],
+        "x-readme-ref-name": "AdminBreakdownItemDto"
+      }
+    },
+    "byProvider": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "key": { "type": "string" },
+          "label": { "type": "string" },
+          "successfulPayments": { "type": "number" },
+          "grossRevenue": { "type": "string" }
+        },
+        "required": ["key", "label", "successfulPayments", "grossRevenue"],
+        "x-readme-ref-name": "AdminBreakdownItemDto"
+      }
+    },
+    "byPaymentType": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "key": { "type": "string" },
+          "label": { "type": "string" },
+          "successfulPayments": { "type": "number" },
+          "grossRevenue": { "type": "string" }
+        },
+        "required": ["key", "label", "successfulPayments", "grossRevenue"],
+        "x-readme-ref-name": "AdminBreakdownItemDto"
+      }
+    },
+    "byPlan": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "key": { "type": "string" },
+          "label": { "type": "string" },
+          "successfulPayments": { "type": "number" },
+          "grossRevenue": { "type": "string" }
+        },
+        "required": ["key", "label", "successfulPayments", "grossRevenue"],
+        "x-readme-ref-name": "AdminBreakdownItemDto"
+      }
+    },
+    "byStatus": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "key": { "type": "string" },
+          "label": { "type": "string" },
+          "successfulPayments": { "type": "number" },
+          "grossRevenue": { "type": "string" }
+        },
+        "required": ["key", "label", "successfulPayments", "grossRevenue"],
+        "x-readme-ref-name": "AdminBreakdownItemDto"
+      }
+    },
+    "promoUsage": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "key": { "type": "string" },
+          "label": { "type": "string" },
+          "usageCount": { "type": "number" }
+        },
+        "required": ["key", "label", "usageCount"],
+        "x-readme-ref-name": "AdminPromoUsageBreakdownItemDto"
+      }
+    }
+  },
+  "required": [
+    "period",
+    "byMerchant",
+    "byProvider",
+    "byPaymentType",
+    "byPlan",
+    "byStatus",
+    "promoUsage"
+  ],
+  "x-readme-ref-name": "AdminMoneyBreakdownsResponseDto"
+}

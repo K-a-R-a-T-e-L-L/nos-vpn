@@ -1,0 +1,24 @@
+{
+  "type": "object",
+  "properties": {
+    "asOf": { "type": "string" },
+    "timezone": { "type": "string" },
+    "segment": { "type": "string" },
+    "items": { "type": "array", "items": { "type": "object" } },
+    "total": { "type": "number" },
+    "page": { "type": "number" },
+    "pageSize": { "type": "number" },
+    "totalPages": { "type": "number" }
+  },
+  "required": [
+    "asOf",
+    "timezone",
+    "segment",
+    "items",
+    "total",
+    "page",
+    "pageSize",
+    "totalPages"
+  ],
+  "x-readme-ref-name": "AdminRetentionUsersResponseDto"
+}

@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "properties": {
+    "code": { "type": "string" },
+    "name": { "type": "string" },
+    "description": { "type": "string" },
+    "websitePath": { "type": "string", "default": "/earn" },
+    "isActive": { "type": "boolean", "default": true }
+  },
+  "x-readme-ref-name": "UpdateTrafficSourceDto"
+}

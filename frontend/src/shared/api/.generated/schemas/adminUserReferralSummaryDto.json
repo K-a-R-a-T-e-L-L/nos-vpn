@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "properties": {
+    "referrer": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "label": { "type": "string" },
+        "email": { "type": "string" },
+        "telegramUsername": { "type": "string" }
+      },
+      "required": ["label"],
+      "x-readme-ref-name": "AdminSafeUserDto"
+    },
+    "referredUsersCount": { "type": "number" },
+    "referredPayingUsers": { "type": "number" },
+    "awardedBonusTotal": { "type": "string" },
+    "currentWalletBalance": { "type": "string" }
+  },
+  "required": [
+    "referredUsersCount",
+    "referredPayingUsers",
+    "awardedBonusTotal",
+    "currentWalletBalance"
+  ],
+  "x-readme-ref-name": "AdminUserReferralSummaryDto"
+}

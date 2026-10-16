@@ -1,0 +1,116 @@
+﻿.header {
+  border-bottom: 1px solid
+    color-mix(in srgb, var(--mantine-color-default-border) 75%, transparent 25%);
+  backdrop-filter: blur(10px);
+  background: color-mix(
+    in srgb,
+    var(--mantine-color-body) 85%,
+    transparent 15%
+  );
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--mantine-color-text);
+  min-width: 0;
+  min-height: 44px;
+  flex-shrink: 0;
+}
+
+.logo {
+  display: block;
+  border-radius: 50%;
+}
+
+.burger {
+  display: none;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 0.95rem;
+  color: var(--mantine-color-text);
+  opacity: 0.86;
+  transition: opacity 0.15s ease;
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link:hover {
+  opacity: 1;
+}
+
+.drawerLink {
+  width: 100%;
+  min-height: 48px;
+}
+
+.drawerLinkActive {
+  border: 1px solid
+    color-mix(in srgb, var(--mantine-color-brandCyan-5) 42%, transparent);
+  background: color-mix(
+    in srgb,
+    var(--mantine-color-brandCyan-9) 24%,
+    transparent
+  );
+}
+
+.drawerBody {
+  overflow-y: auto;
+  overflow-x: visible;
+}
+
+.loginButton {
+  border: 1px solid
+    color-mix(in srgb, var(--mantine-color-brandOrange-6) 30%, transparent 70%);
+  background: color-mix(
+    in srgb,
+    var(--mantine-color-brandOrange-9) 36%,
+    var(--mantine-color-dark-7) 64%
+  );
+  box-shadow: inset 0 1px 0
+    color-mix(in srgb, var(--mantine-color-white) 8%, transparent 92%);
+}
+
+.loginButton:hover {
+  background: color-mix(
+    in srgb,
+    var(--mantine-color-brandOrange-8) 44%,
+    var(--mantine-color-dark-7) 56%
+  );
+}
+
+@media (max-width: 56em) {
+  .nav {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+  }
+}
+
+@media (max-width: 48em) {
+  .loginButton,
+  .tariffButton {
+    display: none;
+  }
+}
+
+@media (max-width: 22.5em) {
+  .brand {
+    gap: 0.35rem;
+  }
+
+  .logo {
+    width: 38px;
+    height: 38px;
+  }
+}

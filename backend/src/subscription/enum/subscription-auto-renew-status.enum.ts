@@ -1,0 +1,6 @@
+export enum SubscriptionAutoRenewStatus {
+    DISABLED = 'DISABLED',
+    ACTIVE = 'ACTIVE',
+    RETRY_SCHEDULED = 'RETRY_SCHEDULED',
+    MANUAL_ACTION_REQUIRED = 'MANUAL_ACTION_REQUIRED',
+}

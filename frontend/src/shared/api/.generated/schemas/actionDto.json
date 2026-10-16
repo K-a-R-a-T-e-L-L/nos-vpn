@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "properties": {
+    "action": { "type": "string" },
+    "planId": { "type": "string" },
+    "promoCode": { "type": "string" },
+    "referralCode": { "type": "string" }
+  },
+  "required": ["action"],
+  "x-readme-ref-name": "ActionDto"
+}

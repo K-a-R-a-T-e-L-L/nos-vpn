@@ -1,0 +1,5 @@
+export enum PaymentMethodConsentSource {
+    NONE = 'NONE',
+    MERCHANT_EXPLICIT = 'MERCHANT_EXPLICIT',
+    YOOKASSA_CONDITIONAL = 'YOOKASSA_CONDITIONAL',
+}

@@ -1,0 +1,5 @@
+export enum PaymentKind {
+    EXTERNAL = 'EXTERNAL',
+    BONUS_BALANCE = 'BONUS_BALANCE',
+    PROMO_DISCOUNT = 'PROMO_DISCOUNT',
+}

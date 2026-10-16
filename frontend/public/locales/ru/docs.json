@@ -1,0 +1,7 @@
+{
+  "title": "Документация",
+  "description": "Рекомендуемый workflow для запуска новых фич:",
+  "step1": "Обнови OpenAPI схему и запусти генерацию кода.",
+  "step2": "Собирай UI в widgets и держи shared-код переиспользуемым.",
+  "step3": "Перед merge прогоняй lint и production build."
+}

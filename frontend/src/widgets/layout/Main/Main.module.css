@@ -1,0 +1,15 @@
+.main {
+  padding-bottom: 0;
+}
+.inner {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  padding-bottom: calc(var(--mantine-spacing-xl) * 1.8);
+}
+
+@media (max-width: 48em) {
+  .inner {
+    padding-bottom: var(--mantine-spacing-lg);
+  }
+}

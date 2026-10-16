@@ -1,0 +1,10 @@
+{
+  "type": "object",
+  "properties": {
+    "promoCode": { "type": "string" },
+    "status": { "type": "string" },
+    "appliedAt": { "type": "string" }
+  },
+  "required": ["promoCode", "status"],
+  "x-readme-ref-name": "AdminUserPromoUsageDto"
+}

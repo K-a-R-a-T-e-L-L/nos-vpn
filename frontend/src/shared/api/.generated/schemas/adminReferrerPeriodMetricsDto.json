@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "properties": {
+    "invitedUsers": { "type": "number" },
+    "payingInvitedUsers": { "type": "number" },
+    "referredSuccessfulPayments": { "type": "number" },
+    "referredGrossRevenue": { "type": "string" },
+    "awardedBonus": { "type": "string" }
+  },
+  "required": [
+    "invitedUsers",
+    "payingInvitedUsers",
+    "referredSuccessfulPayments",
+    "referredGrossRevenue",
+    "awardedBonus"
+  ],
+  "x-readme-ref-name": "AdminReferrerPeriodMetricsDto"
+}

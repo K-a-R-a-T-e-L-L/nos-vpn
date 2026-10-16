@@ -1,0 +1,6 @@
+{
+  "type": "object",
+  "properties": { "isBlocked": { "type": "boolean" } },
+  "required": ["isBlocked"],
+  "x-readme-ref-name": "UpdateUserBlockDto"
+}

@@ -1,0 +1,92 @@
+{
+  "type": "object",
+  "properties": {
+    "data": {
+      "title": "Array of entities",
+      "additionalProperties": false,
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "meta": {
+      "title": "Pagination Metadata",
+      "allOf": [
+        {
+          "type": "object",
+          "properties": {
+            "itemsPerPage": {
+              "type": "number",
+              "title": "Number of items per page"
+            },
+            "totalItems": {
+              "type": "number",
+              "title": "Total number of items"
+            },
+            "currentPage": {
+              "type": "number",
+              "title": "Current requested page"
+            },
+            "totalPages": {
+              "type": "number",
+              "title": "Total number of pages"
+            },
+            "sortBy": {
+              "type": "array",
+              "title": "Sorting by columns",
+              "items": {
+                "type": "array",
+                "items": {
+                  "oneOf": [
+                    { "type": "string" },
+                    { "type": "string", "enum": ["ASC", "DESC"] }
+                  ]
+                }
+              }
+            },
+            "searchBy": {
+              "title": "Search by fields",
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "search": { "type": "string", "title": "Search term" },
+            "select": {
+              "title": "List of selected fields",
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "filter": {
+              "type": "object",
+              "title": "Filters that applied to the query",
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "itemsPerPage",
+            "totalItems",
+            "currentPage",
+            "totalPages",
+            "filter"
+          ],
+          "x-readme-ref-name": "PaginatedMetaDocumented"
+        }
+      ]
+    },
+    "links": {
+      "title": "Links to pages",
+      "allOf": [
+        {
+          "type": "object",
+          "properties": {
+            "first": { "type": "string", "title": "Link to first page" },
+            "previous": { "type": "string", "title": "Link to previous page" },
+            "current": { "type": "string", "title": "Link to current page" },
+            "next": { "type": "string", "title": "Link to next page" },
+            "last": { "type": "string", "title": "Link to last page" }
+          },
+          "x-readme-ref-name": "PaginatedLinksDocumented"
+        }
+      ]
+    }
+  },
+  "required": ["data", "meta", "links"],
+  "x-readme-ref-name": "PaginatedDocumented"
+}

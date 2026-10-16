@@ -1,0 +1,9 @@
+export enum SubscriptionRenewalStatus {
+    PLANNED = 'PLANNED',
+    IN_PROGRESS = 'IN_PROGRESS',
+    PENDING = 'PENDING',
+    SUCCEEDED = 'SUCCEEDED',
+    FAILED = 'FAILED',
+    MANUAL_ACTION_REQUIRED = 'MANUAL_ACTION_REQUIRED',
+    CANCELED = 'CANCELED',
+}

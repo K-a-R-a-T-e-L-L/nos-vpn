@@ -1,0 +1,37 @@
+{
+  "type": "object",
+  "properties": {
+    "status": { "type": "string" },
+    "plan": { "type": "string", "nullable": true },
+    "planCode": { "type": "string", "nullable": true },
+    "planTitle": { "type": "string", "nullable": true },
+    "planDescription": { "type": "string", "nullable": true },
+    "expiresAt": { "format": "date-time", "type": "string", "nullable": true },
+    "graceEndsAt": {
+      "format": "date-time",
+      "type": "string",
+      "nullable": true
+    },
+    "subscriptionUrl": { "type": "string", "nullable": true },
+    "qrPayload": { "type": "string", "nullable": true },
+    "rawConfig": {
+      "nullable": true,
+      "allOf": [
+        {
+          "type": "object",
+          "properties": {
+            "providerExternalId": { "type": "string", "nullable": true },
+            "providerClientKey": { "type": "string", "nullable": true },
+            "inboundKey": { "type": "string", "nullable": true },
+            "configPayload": { "type": "object", "nullable": true }
+          },
+          "x-readme-ref-name": "RawAccessConfigDto"
+        }
+      ]
+    },
+    "deliveryMode": { "type": "string" },
+    "instructions": { "type": "string" }
+  },
+  "required": ["status", "deliveryMode", "instructions"],
+  "x-readme-ref-name": "UserAccessResponseDto"
+}

@@ -1,0 +1,6 @@
+{
+  "type": "object",
+  "properties": { "plans": { "type": "array", "items": { "type": "string" } } },
+  "required": ["plans"],
+  "x-readme-ref-name": "UpsertPlanCatalogDto"
+}

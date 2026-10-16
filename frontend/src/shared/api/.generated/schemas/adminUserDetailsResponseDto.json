@@ -1,0 +1,181 @@
+{
+  "type": "object",
+  "properties": {
+    "profile": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "label": { "type": "string" },
+        "email": { "type": "string" },
+        "telegramUsername": { "type": "string" },
+        "authChannels": {
+          "type": "array",
+          "items": { "type": "string", "enum": ["EMAIL", "TELEGRAM"] }
+        },
+        "createdAt": { "type": "string" },
+        "role": { "type": "string" },
+        "isBlocked": { "type": "boolean" },
+        "subscription": {
+          "type": "object",
+          "properties": {
+            "state": { "type": "string" },
+            "status": { "type": "string" },
+            "planId": { "type": "string" },
+            "planTitle": { "type": "string" },
+            "endsAt": { "type": "string" },
+            "autoRenewEnabled": { "type": "boolean" }
+          },
+          "required": ["state", "autoRenewEnabled"],
+          "x-readme-ref-name": "AdminUserSubscriptionDto"
+        },
+        "successfulPaidTotal": { "type": "string" },
+        "successfulPayments": { "type": "number" },
+        "lastPaidAt": { "type": "string" },
+        "referredUsersCount": { "type": "number" },
+        "wasReferred": { "type": "boolean" }
+      },
+      "required": [
+        "id",
+        "label",
+        "authChannels",
+        "createdAt",
+        "role",
+        "isBlocked",
+        "subscription",
+        "successfulPaidTotal",
+        "successfulPayments",
+        "referredUsersCount",
+        "wasReferred"
+      ],
+      "x-readme-ref-name": "AdminUserItemDto"
+    },
+    "paymentHistory": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "shortId": { "type": "string" },
+          "createdAt": { "type": "string" },
+          "paidAt": { "type": "string" },
+          "user": {
+            "type": "object",
+            "properties": {
+              "id": { "type": "string" },
+              "label": { "type": "string" },
+              "email": { "type": "string" },
+              "telegramUsername": { "type": "string" }
+            },
+            "required": ["label"],
+            "x-readme-ref-name": "AdminSafeUserDto"
+          },
+          "merchant": { "type": "string" },
+          "provider": { "type": "string" },
+          "paymentType": {
+            "type": "string",
+            "enum": [
+              "FIRST_PURCHASE",
+              "MANUAL_RENEWAL",
+              "RECURRENT",
+              "BONUS",
+              "PROMO_DISCOUNT"
+            ]
+          },
+          "plan": {
+            "type": "object",
+            "properties": {
+              "id": { "type": "string" },
+              "code": { "type": "string" },
+              "title": { "type": "string" }
+            },
+            "x-readme-ref-name": "AdminSafePlanDto"
+          },
+          "promoCode": { "type": "string" },
+          "amount": { "type": "string" },
+          "currency": { "type": "string" },
+          "status": { "type": "string" },
+          "activationStatus": { "type": "string" }
+        },
+        "required": [
+          "id",
+          "shortId",
+          "createdAt",
+          "user",
+          "provider",
+          "paymentType",
+          "plan",
+          "amount",
+          "currency",
+          "status"
+        ],
+        "x-readme-ref-name": "AdminPaymentItemDto"
+      }
+    },
+    "paymentTotal": { "type": "number" },
+    "paymentPage": { "type": "number" },
+    "paymentPageSize": { "type": "number" },
+    "promoUsages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "promoCode": { "type": "string" },
+          "status": { "type": "string" },
+          "appliedAt": { "type": "string" }
+        },
+        "required": ["promoCode", "status"],
+        "x-readme-ref-name": "AdminUserPromoUsageDto"
+      }
+    },
+    "referral": {
+      "type": "object",
+      "properties": {
+        "referrer": {
+          "type": "object",
+          "properties": {
+            "id": { "type": "string" },
+            "label": { "type": "string" },
+            "email": { "type": "string" },
+            "telegramUsername": { "type": "string" }
+          },
+          "required": ["label"],
+          "x-readme-ref-name": "AdminSafeUserDto"
+        },
+        "referredUsersCount": { "type": "number" },
+        "referredPayingUsers": { "type": "number" },
+        "awardedBonusTotal": { "type": "string" },
+        "currentWalletBalance": { "type": "string" }
+      },
+      "required": [
+        "referredUsersCount",
+        "referredPayingUsers",
+        "awardedBonusTotal",
+        "currentWalletBalance"
+      ],
+      "x-readme-ref-name": "AdminUserReferralSummaryDto"
+    },
+    "supportSummary": {
+      "type": "object",
+      "properties": {
+        "status": { "type": "string" },
+        "messagesCount": { "type": "number" },
+        "lastMessageAt": { "type": "string" },
+        "lastUserMessageAt": { "type": "string" },
+        "lastAdminMessageAt": { "type": "string" }
+      },
+      "required": ["messagesCount"],
+      "x-readme-ref-name": "AdminUserSupportSummaryDto"
+    }
+  },
+  "required": [
+    "profile",
+    "paymentHistory",
+    "paymentTotal",
+    "paymentPage",
+    "paymentPageSize",
+    "promoUsages",
+    "referral",
+    "supportSummary"
+  ],
+  "x-readme-ref-name": "AdminUserDetailsResponseDto"
+}

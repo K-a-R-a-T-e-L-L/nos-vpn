@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "properties": {
+    "asOf": { "type": "string" },
+    "timezone": { "type": "string" },
+    "scope": { "type": "string" },
+    "customerUsers": { "type": "number" },
+    "currentPaidUsers": { "type": "number" },
+    "activeRepeatPayers": { "type": "number" },
+    "repeatPayersEver": { "type": "number" },
+    "onePaymentNoPaidEntitlement": { "type": "number" },
+    "trialOnlyNoEntitlement": { "type": "number" },
+    "trialUsers": { "type": "number" },
+    "trialConvertedUsers": { "type": "number" },
+    "payingUsersEver": { "type": "number" },
+    "trialConversionRate": { "type": "string" },
+    "repeatPurchaseRate": { "type": "string" }
+  },
+  "required": [
+    "asOf",
+    "timezone",
+    "scope",
+    "customerUsers",
+    "currentPaidUsers",
+    "activeRepeatPayers",
+    "repeatPayersEver",
+    "onePaymentNoPaidEntitlement",
+    "trialOnlyNoEntitlement",
+    "trialUsers",
+    "trialConvertedUsers",
+    "payingUsersEver",
+    "trialConversionRate",
+    "repeatPurchaseRate"
+  ],
+  "x-readme-ref-name": "AdminRetentionOverviewResponseDto"
+}

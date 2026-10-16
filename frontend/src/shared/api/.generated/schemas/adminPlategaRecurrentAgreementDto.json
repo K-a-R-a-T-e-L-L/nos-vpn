@@ -1,0 +1,57 @@
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string", "format": "uuid" },
+    "userId": { "type": "string", "format": "uuid" },
+    "merchant": { "type": "string", "enum": ["SITE", "BOT"] },
+    "status": { "type": "string" },
+    "providerStatus": { "type": "string", "nullable": true },
+    "planId": { "type": "string", "format": "uuid" },
+    "planName": { "type": "string", "nullable": true },
+    "planPeriodDays": { "type": "number", "nullable": true },
+    "amount": { "type": "number" },
+    "currency": { "type": "string" },
+    "cadence": {
+      "type": "string",
+      "enum": ["MONTHLY", "YEARLY"],
+      "nullable": true
+    },
+    "nextChargeAt": {
+      "format": "date-time",
+      "type": "string",
+      "nullable": true
+    },
+    "lastChargeAt": {
+      "format": "date-time",
+      "type": "string",
+      "nullable": true
+    },
+    "cancelledAt": {
+      "format": "date-time",
+      "type": "string",
+      "nullable": true
+    },
+    "consentAcceptedAt": {
+      "format": "date-time",
+      "type": "string",
+      "nullable": true
+    },
+    "consentLegalVersion": { "type": "string", "nullable": true },
+    "canCancel": { "type": "boolean" },
+    "canReconcile": { "type": "boolean" },
+    "createdAt": { "format": "date-time", "type": "string" }
+  },
+  "required": [
+    "id",
+    "userId",
+    "merchant",
+    "status",
+    "planId",
+    "amount",
+    "currency",
+    "canCancel",
+    "canReconcile",
+    "createdAt"
+  ],
+  "x-readme-ref-name": "AdminPlategaRecurrentAgreementDto"
+}

@@ -1,0 +1,6 @@
+{
+  "type": "object",
+  "properties": { "requestToken": { "type": "string" } },
+  "required": ["requestToken"],
+  "x-readme-ref-name": "TelegramAuthStatusDto"
+}

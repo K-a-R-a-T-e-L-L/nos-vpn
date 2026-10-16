@@ -1,0 +1,14 @@
+{
+  "type": "object",
+  "properties": {
+    "available": { "type": "boolean" },
+    "eligible": { "type": "boolean" },
+    "cadence": {
+      "type": "string",
+      "enum": ["MONTHLY", "YEARLY"],
+      "nullable": true
+    }
+  },
+  "required": ["available", "eligible", "cadence"],
+  "x-readme-ref-name": "PaymentRecurrentCheckoutOptionDto"
+}

@@ -1,0 +1,28 @@
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "createdAt": { "format": "date-time", "type": "string" },
+    "updatedAt": { "format": "date-time", "type": "string" },
+    "deletedAt": { "format": "date-time", "type": "string" },
+    "code": { "type": "string" },
+    "title": { "type": "string" },
+    "description": { "type": "string" },
+    "name": { "type": "string" },
+    "period": { "type": "number" },
+    "amount": { "type": "number" },
+    "devicesLimit": { "type": "number", "nullable": true },
+    "isActive": { "type": "boolean" }
+  },
+  "required": [
+    "id",
+    "createdAt",
+    "updatedAt",
+    "deletedAt",
+    "name",
+    "period",
+    "amount",
+    "isActive"
+  ],
+  "x-readme-ref-name": "Plan"
+}

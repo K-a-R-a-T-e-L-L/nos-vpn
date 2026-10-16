@@ -1,0 +1,7 @@
+{
+  "title": "Docs",
+  "description": "Recommended flow for starting new features:",
+  "step1": "Update OpenAPI schema and run code generation.",
+  "step2": "Build UI in widgets and keep shared code reusable.",
+  "step3": "Validate with lint and production build before merge."
+}

@@ -1,0 +1,51 @@
+{
+  "type": "object",
+  "properties": {
+    "period": {
+      "type": "object",
+      "properties": {
+        "from": { "type": "string" },
+        "to": { "type": "string" },
+        "timezone": { "type": "string", "example": "Europe/Moscow" },
+        "preset": {
+          "type": "string",
+          "enum": [
+            "TODAY",
+            "YESTERDAY",
+            "LAST_7_DAYS",
+            "LAST_30_DAYS",
+            "CURRENT_MONTH",
+            "PREVIOUS_MONTH",
+            "CUSTOM"
+          ]
+        }
+      },
+      "required": ["from", "to", "timezone", "preset"],
+      "x-readme-ref-name": "AdminAnalyticsPeriodResponseDto"
+    },
+    "grossRevenue": { "type": "string" },
+    "successfulPayments": { "type": "number" },
+    "uniquePayingUsers": { "type": "number" },
+    "averageCheck": { "type": "string" },
+    "firstPurchases": { "type": "number" },
+    "manualRenewals": { "type": "number" },
+    "recurrentPayments": { "type": "number" },
+    "failedPayments": { "type": "number" },
+    "canceledPayments": { "type": "number" },
+    "expiredPayments": { "type": "number" }
+  },
+  "required": [
+    "period",
+    "grossRevenue",
+    "successfulPayments",
+    "uniquePayingUsers",
+    "averageCheck",
+    "firstPurchases",
+    "manualRenewals",
+    "recurrentPayments",
+    "failedPayments",
+    "canceledPayments",
+    "expiredPayments"
+  ],
+  "x-readme-ref-name": "AdminMoneyOverviewResponseDto"
+}

@@ -1,0 +1,56 @@
+{
+  "type": "object",
+  "properties": {
+    "period": {
+      "type": "object",
+      "properties": {
+        "from": { "type": "string" },
+        "to": { "type": "string" },
+        "timezone": { "type": "string", "example": "Europe/Moscow" },
+        "preset": {
+          "type": "string",
+          "enum": [
+            "TODAY",
+            "YESTERDAY",
+            "LAST_7_DAYS",
+            "LAST_30_DAYS",
+            "CURRENT_MONTH",
+            "PREVIOUS_MONTH",
+            "CUSTOM"
+          ]
+        }
+      },
+      "required": ["from", "to", "timezone", "preset"],
+      "x-readme-ref-name": "AdminAnalyticsPeriodResponseDto"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "date": { "type": "string" },
+          "grossRevenue": { "type": "string" },
+          "successfulPayments": { "type": "number" },
+          "firstPurchases": { "type": "number" },
+          "manualRenewals": { "type": "number" },
+          "recurrentPayments": { "type": "number" },
+          "failedPayments": { "type": "number" },
+          "canceledPayments": { "type": "number" }
+        },
+        "required": [
+          "date",
+          "grossRevenue",
+          "successfulPayments",
+          "firstPurchases",
+          "manualRenewals",
+          "recurrentPayments",
+          "failedPayments",
+          "canceledPayments"
+        ],
+        "x-readme-ref-name": "AdminMoneyTimeseriesPointDto"
+      }
+    }
+  },
+  "required": ["period", "items"],
+  "x-readme-ref-name": "AdminMoneyTimeseriesResponseDto"
+}

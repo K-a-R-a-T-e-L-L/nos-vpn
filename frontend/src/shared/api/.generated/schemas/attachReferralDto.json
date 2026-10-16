@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "properties": {
+    "referralCode": {
+      "type": "string",
+      "description": "Referral code captured from Telegram deep link or website invite link",
+      "example": "ref_2iazzkb"
+    }
+  },
+  "required": ["referralCode"],
+  "x-readme-ref-name": "AttachReferralDto"
+}

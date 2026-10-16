@@ -1,0 +1,8 @@
+services:
+  app:
+    image: ${BACKEND_IMAGE:-vpn-backend:latest}
+    build: .
+    env_file: .env
+    restart: unless-stopped
+    ports:
+      - "${PORT:-3200}:${PORT:-3200}"

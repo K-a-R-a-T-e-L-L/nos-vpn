@@ -1,0 +1,47 @@
+.loginSection {
+  width: 100%;
+  min-width: 0;
+  padding-block: clamp(24px, 4vw, 44px);
+}
+
+.loginGrid,
+.fullControl,
+.authTabsList {
+  width: 100%;
+  min-width: 0;
+}
+
+.authTab {
+  min-width: 0;
+}
+
+.loginError {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+@media (max-width: 47.99em) {
+  .loginSection {
+    width: auto;
+    margin-inline: -4px;
+  }
+
+  .loginGrid {
+    gap: var(--mantine-spacing-md);
+  }
+
+  .telegramIntro {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .authTabsList {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .authTab {
+    width: 100%;
+    padding-inline: 8px;
+  }
+}

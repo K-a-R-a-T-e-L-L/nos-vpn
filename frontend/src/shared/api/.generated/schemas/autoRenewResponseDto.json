@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "properties": {
+    "enabled": { "type": "boolean" },
+    "status": {
+      "type": "string",
+      "enum": [
+        "DISABLED",
+        "ACTIVE",
+        "RETRY_SCHEDULED",
+        "MANUAL_ACTION_REQUIRED"
+      ]
+    },
+    "merchant": { "type": "string", "enum": ["SITE", "BOT"], "nullable": true },
+    "nextPaymentAt": {
+      "format": "date-time",
+      "type": "string",
+      "nullable": true
+    },
+    "lastPaymentAt": {
+      "format": "date-time",
+      "type": "string",
+      "nullable": true
+    },
+    "method": { "type": "object", "nullable": true }
+  },
+  "required": [
+    "enabled",
+    "status",
+    "merchant",
+    "nextPaymentAt",
+    "lastPaymentAt",
+    "method"
+  ],
+  "x-readme-ref-name": "AutoRenewResponseDto"
+}

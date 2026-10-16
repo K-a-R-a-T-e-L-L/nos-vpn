@@ -1,0 +1,16 @@
+.layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; min-width: 0; }
+.formPanel, .listPanel, .mobilePromo { min-width: 0; overflow-wrap: normal; }
+.tableViewport { width: 100%; min-width: 0; overflow-x: auto; }
+.promoTable { width: 100%; table-layout: auto; }
+.promoTable th, .noWrap, .actions, .statusCell, .usageCell { white-space: nowrap; overflow-wrap: normal; }
+.codeCell { min-width: 9rem; overflow-wrap: normal; }
+.parametersCell { min-width: 10rem; overflow-wrap: normal; word-break: normal; }
+.statusCell { min-width: 8.5rem; }
+.statusText { overflow-wrap: normal; white-space: normal; }
+.actions { width: 1%; min-width: max-content; }
+.mobilePromo { overflow-wrap: normal; }
+.srOnly { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+@media (min-width: 1200px) {
+  .layout { grid-template-columns: minmax(0, 0.35fr) minmax(0, 0.65fr); }
+}

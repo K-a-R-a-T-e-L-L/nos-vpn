@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "properties": {
+    "currentMonth": { "type": "string" },
+    "previousMonth": { "type": "string" },
+    "allTime": { "type": "string" },
+    "timezone": { "type": "string", "example": "Europe/Moscow" },
+    "currentMonthFrom": { "type": "string" },
+    "currentMonthTo": { "type": "string" },
+    "previousMonthFrom": { "type": "string" }
+  },
+  "required": [
+    "currentMonth",
+    "previousMonth",
+    "allTime",
+    "timezone",
+    "currentMonthFrom",
+    "currentMonthTo",
+    "previousMonthFrom"
+  ],
+  "x-readme-ref-name": "AdminReferrerEarningsDto"
+}

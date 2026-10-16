@@ -1,0 +1,46 @@
+{
+  "type": "object",
+  "properties": {
+    "itemsPerPage": { "type": "number", "title": "Number of items per page" },
+    "totalItems": { "type": "number", "title": "Total number of items" },
+    "currentPage": { "type": "number", "title": "Current requested page" },
+    "totalPages": { "type": "number", "title": "Total number of pages" },
+    "sortBy": {
+      "type": "array",
+      "title": "Sorting by columns",
+      "items": {
+        "type": "array",
+        "items": {
+          "oneOf": [
+            { "type": "string" },
+            { "type": "string", "enum": ["ASC", "DESC"] }
+          ]
+        }
+      }
+    },
+    "searchBy": {
+      "title": "Search by fields",
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "search": { "type": "string", "title": "Search term" },
+    "select": {
+      "title": "List of selected fields",
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "filter": {
+      "type": "object",
+      "title": "Filters that applied to the query",
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "itemsPerPage",
+    "totalItems",
+    "currentPage",
+    "totalPages",
+    "filter"
+  ],
+  "x-readme-ref-name": "PaginatedMetaDocumented"
+}

@@ -1,0 +1,6 @@
+{
+  "type": "object",
+  "properties": { "available": { "type": "boolean" } },
+  "required": ["available"],
+  "x-readme-ref-name": "PaymentCheckoutAvailabilityDto"
+}

@@ -1,0 +1,95 @@
+{
+  "type": "object",
+  "properties": {
+    "period": {
+      "type": "object",
+      "properties": {
+        "from": { "type": "string" },
+        "to": { "type": "string" },
+        "timezone": { "type": "string", "example": "Europe/Moscow" },
+        "preset": {
+          "type": "string",
+          "enum": [
+            "TODAY",
+            "YESTERDAY",
+            "LAST_7_DAYS",
+            "LAST_30_DAYS",
+            "CURRENT_MONTH",
+            "PREVIOUS_MONTH",
+            "CUSTOM"
+          ]
+        }
+      },
+      "required": ["from", "to", "timezone", "preset"],
+      "x-readme-ref-name": "AdminAnalyticsPeriodResponseDto"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "shortId": { "type": "string" },
+          "createdAt": { "type": "string" },
+          "paidAt": { "type": "string" },
+          "user": {
+            "type": "object",
+            "properties": {
+              "id": { "type": "string" },
+              "label": { "type": "string" },
+              "email": { "type": "string" },
+              "telegramUsername": { "type": "string" }
+            },
+            "required": ["label"],
+            "x-readme-ref-name": "AdminSafeUserDto"
+          },
+          "merchant": { "type": "string" },
+          "provider": { "type": "string" },
+          "paymentType": {
+            "type": "string",
+            "enum": [
+              "FIRST_PURCHASE",
+              "MANUAL_RENEWAL",
+              "RECURRENT",
+              "BONUS",
+              "PROMO_DISCOUNT"
+            ]
+          },
+          "plan": {
+            "type": "object",
+            "properties": {
+              "id": { "type": "string" },
+              "code": { "type": "string" },
+              "title": { "type": "string" }
+            },
+            "x-readme-ref-name": "AdminSafePlanDto"
+          },
+          "promoCode": { "type": "string" },
+          "amount": { "type": "string" },
+          "currency": { "type": "string" },
+          "status": { "type": "string" },
+          "activationStatus": { "type": "string" }
+        },
+        "required": [
+          "id",
+          "shortId",
+          "createdAt",
+          "user",
+          "provider",
+          "paymentType",
+          "plan",
+          "amount",
+          "currency",
+          "status"
+        ],
+        "x-readme-ref-name": "AdminPaymentItemDto"
+      }
+    },
+    "total": { "type": "number" },
+    "page": { "type": "number" },
+    "pageSize": { "type": "number" },
+    "totalPages": { "type": "number" }
+  },
+  "required": ["period", "items", "total", "page", "pageSize", "totalPages"],
+  "x-readme-ref-name": "AdminPaymentListResponseDto"
+}
