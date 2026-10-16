@@ -15,19 +15,6 @@ import { PaymentStatusEnum } from '../enum/payment-status.enum'
 jest.setTimeout(90_000)
 
 describe('Platega recurrent PostgreSQL concurrency', () => {
-    beforeEach(() => {
-        // Freeze Date while leaving PostgreSQL socket and timeout scheduling real.
-        jest.useFakeTimers({
-            now: new Date('2026-09-01T00:00:00Z'),
-            doNotFake: [
-                'nextTick', 'setImmediate', 'clearImmediate', 'setInterval', 'clearInterval',
-                'setTimeout', 'clearTimeout', 'hrtime', 'performance', 'queueMicrotask',
-            ],
-        })
-    })
-
-    afterEach(() => jest.useRealTimers())
-
     it('lets concurrent delivery extend exact-day access once for one charge id', async () => {
         const cluster = await startDisposablePostgres('nosvpn-platega-recurrent-pg-')
         let dataSource: DataSource | undefined
@@ -58,7 +45,10 @@ describe('Platega recurrent PostgreSQL concurrency', () => {
             const plan = await dataSource
                 .getRepository(Plan)
                 .save({ name: '30 days', period: 30, amount: 500, isActive: true })
-            const initialEndsAt = new Date('2026-09-10T00:00:00Z')
+            // Keep application and PostgreSQL clocks aligned for activation leases.
+            const startAt = new Date()
+            const initialEndsAt = new Date(startAt.getTime() + 30 * 24 * 60 * 60 * 1000)
+            const paidThroughAt = new Date(initialEndsAt.getTime() + 30 * 24 * 60 * 60 * 1000)
             const subscription = await dataSource.getRepository(Subscription).save({
                 user,
                 userId: user.id,
@@ -67,7 +57,7 @@ describe('Platega recurrent PostgreSQL concurrency', () => {
                 status: 'ACTIVE',
                 yookassaPaymentId: '',
                 nextPayAt: initialEndsAt,
-                startAt: new Date('2026-08-11T00:00:00Z'),
+                startAt,
                 endsAt: initialEndsAt,
             } as any)
             const payment = await dataSource.getRepository(Payment).save({
@@ -97,13 +87,12 @@ describe('Platega recurrent PostgreSQL concurrency', () => {
             )
 
             await Promise.all([
-                service.processConfirmedPlategaRecurrentCharge(payment.id, new Date('2026-10-10T00:00:00Z')),
-                service.processConfirmedPlategaRecurrentCharge(payment.id, new Date('2026-10-10T00:00:00Z')),
+                service.processConfirmedPlategaRecurrentCharge(payment.id, paidThroughAt),
+                service.processConfirmedPlategaRecurrentCharge(payment.id, paidThroughAt),
             ])
 
             const refreshed = await dataSource.getRepository(Subscription).findOneByOrFail({ id: subscription.id })
-            const expected = new Date('2026-10-10T00:00:00Z')
-            expect(refreshed.endsAt).toEqual(expected)
+            expect(refreshed.endsAt).toEqual(paidThroughAt)
             expect(orchestrator.activatePaidSubscription).toHaveBeenCalledTimes(1)
             expect(
                 (await dataSource.getRepository(Payment).findOneByOrFail({ id: payment.id })).processedAt,
